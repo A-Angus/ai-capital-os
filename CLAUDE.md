@@ -1,4 +1,5 @@
-# LEX AI Capital OS — Operator Brain
+python3 << 'PYEOF'
+content = """# LEX AI Capital OS — Operator Brain
 # Alex Angus / Liberty Equity Xchange
 
 ## Identity
@@ -154,3 +155,10 @@ Every task returns:
 1. What you did
 2. The actual output
 3. Recommended next action (one sentence)
+"""
+
+with open('/home/lexbot/ai-capital-os/CLAUDE.md', 'w') as f:
+    f.write(content)
+
+print("Written successfully. Lines:", len(content.splitlines()))
+PYEOF
