@@ -21,9 +21,9 @@ Liberty Equity Xchange — Commercial loan brokerage and capital advisory. Struc
 - Never include Liberty Equity Xchange in email signatures
 
 Core positioning:
-- "I specialize in structuring and placing capital for real estate investors."
-- "We help investors secure the right capital stack for their deal."
-- "If the deal makes sense, we can usually find the capital."
+- I specialize in structuring and placing capital for real estate investors.
+- We help investors secure the right capital stack for their deal.
+- If the deal makes sense, we can usually find the capital.
 
 ## Operator Routing
 
