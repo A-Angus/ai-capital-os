@@ -1,236 +1,359 @@
 #!/usr/bin/env python3
-"""Night Operator — runs at 2 AM, picks the highest-leverage task and executes it.
-Outputs go to /home/lexbot/.local/share/lex/* as defined in goals.md.
+"""
+LEX Night Operator v2 — runs at 2 AM PST
+Scans all deals, pipeline, lenders, and inbox.
+Identifies stuck deals, missed follow-ups, stalled items.
+Generates prioritized action list and executes highest leverage task.
 """
 from __future__ import annotations
 import datetime as dt
 from pathlib import Path
 import subprocess
+import json
 
-BRAIN = Path('/home/lexbot/brain')
-LEX = Path('/home/lexbot/lex-output')
+BRAIN = Path("/home/lexbot/brain")
+LEX = Path("/home/lexbot/lex-output")
 
-GOALS = BRAIN / 'goals.md'
-DAILY_LOG = BRAIN / 'daily' / f"{dt.date.today().isoformat()}.md"
-OPEN_LOOPS = BRAIN / 'daily-log' / 'OPEN_LOOPS.md'
-ACTIVE = BRAIN / 'daily-log' / 'ACTIVE_PROJECTS.md'
-DEALS = BRAIN / 'deals' / 'deals.md'
+GOALS        = BRAIN / "goals.md"
+DEALS        = BRAIN / "deals" / "deals.md"
+LENDERS      = BRAIN / "lenders" / "lenders.md"
+PIPELINE_DIR = BRAIN / "pipeline"
+DAILY_LOG    = BRAIN / "daily-log" / f"{dt.date.today().isoformat()}.md"
+PEOPLE_DIR   = BRAIN / "people"
 
-# Output dirs per goals.md
-REPORTS_DIR   = LEX / 'reports'
-FOLLOWUPS_DIR = LEX / 'followups'
-CONTENT_DIR   = LEX / 'content'
-RESEARCH_DIR  = LEX / 'lender_research'
-RESOURCES_DIR = LEX / 'resources'
+REPORTS_DIR   = LEX / "reports"
+FOLLOWUPS_DIR = LEX / "followups"
+CONTENT_DIR   = LEX / "content"
+RESEARCH_DIR  = LEX / "lender_research"
 
-GMAIL_ACCOUNT = 'mr.alexangus@gmail.com'
+GMAIL_ACCOUNT = "mr.alexangus@gmail.com"
+TODAY         = dt.date.today().isoformat()
+NOW           = dt.datetime.now()
 
 
 def read_text(path: Path) -> str:
-    return path.read_text() if path.exists() else ''
+    return path.read_text() if path.exists() else ""
 
 
 def run_gmail_search(query: str) -> str:
     cmd = [
-        'bash', '-lc',
-        f'export GOG_KEYRING_PASSWORD=openclaw && gog gmail messages search {query!r} --account {GMAIL_ACCOUNT} --max 10'
+        "bash", "-lc",
+        f"export GOG_KEYRING_PASSWORD=openclaw && gog gmail messages search {query!r} --account {GMAIL_ACCOUNT} --max 10"
     ]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=25)
-        return (result.stdout or '') + ('\n' + result.stderr if result.stderr else '')
+        return (result.stdout or "") + ("\n" + result.stderr if result.stderr else "")
     except Exception as e:
-        return f'ERROR: {e}'
+        return f"ERROR: {e}"
 
 
-def inbox_signal() -> tuple[str | None, str]:
+# ─── DEAL SCANNER ──────────────────────────────────────────────────────────────
+
+def scan_deals() -> list[dict]:
+    """Parse deals.md and return structured deal list with status flags."""
+    deals_text = read_text(DEALS)
+    deals = []
+
+    active_keywords = ["structuring", "under review", "submitted", "active", "pending", "in progress"]
+    stall_keywords  = ["waiting", "stalled", "no response", "follow up needed", "unclear"]
+    dead_keywords   = ["dead", "cancelled", "passed", "withdrawn"]
+
+    for line in deals_text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or line.startswith("|--"):
+            continue
+        lower = line.lower()
+
+        if any(k in lower for k in dead_keywords):
+            continue
+
+        deal = {"raw": line, "status": "unknown", "flags": []}
+
+        if any(k in lower for k in active_keywords):
+            deal["status"] = "active"
+        if any(k in lower for k in stall_keywords):
+            deal["flags"].append("stalled")
+        if "coalson" in lower:
+            deal["name"] = "Coalson Excavation"
+            deal["priority"] = "high"
+        elif "acj" in lower or "nic bray" in lower:
+            deal["name"] = "ACJ Built"
+            deal["priority"] = "high"
+        elif "nikita" in lower or "baker" in lower:
+            deal["name"] = "Nikita Baker"
+            deal["priority"] = "high"
+        elif "youngs lane" in lower or "nashville" in lower or "tanya" in lower:
+            deal["name"] = "Nashville Transactional"
+            deal["priority"] = "critical"
+            deal["flags"].append("deadline")
+        else:
+            deal["name"] = line[:40]
+            deal["priority"] = "normal"
+
+        deals.append(deal)
+
+    return deals
+
+
+def scan_pipeline_files() -> list[dict]:
+    """Check pipeline folder for recent followup files and flag stale ones."""
+    stale = []
+    if not PIPELINE_DIR.exists():
+        return stale
+
+    cutoff = NOW - dt.timedelta(hours=48)
+    for f in sorted(PIPELINE_DIR.glob("*.md")):
+        try:
+            mtime = dt.datetime.fromtimestamp(f.stat().st_mtime)
+            if mtime < cutoff:
+                stale.append({"file": f.name, "last_updated": mtime.isoformat(), "hours_ago": round((NOW - mtime).total_seconds() / 3600)})
+        except Exception:
+            pass
+    return stale
+
+
+def scan_inbox() -> tuple[str | None, str]:
+    """Check inbox for deal-related signals."""
     query = (
-        '(from:rodoentre@gmail.com OR from:lbogner@cogocapital.com '
-        'OR from:giancarloyacarine@gmail.com OR from:jamonewoodley@yahoo.com '
-        'OR from:scbinnovativesolutions@gmail.com OR from:easystreetcap.com '
-        'OR subject:Cheltenham OR subject:Sherbourne OR subject:Mehl '
-        'OR subject:"Conley Downs") newer_than:2d'
+        "(from:wolfer OR from:bohnker OR from:kennedy OR from:sognare OR from:tanya "
+        "OR from:nikita OR from:unitas OR from:jz OR from:zendejas OR from:levinecapital "
+        "OR from:cogocapital OR subject:Coalson OR subject:ACJ OR subject:Nikita "
+        "OR subject:Youngs OR subject:Nashville) newer_than:2d"
     )
     output = run_gmail_search(query)
     lower = output.lower()
-    if 'rodoentre@gmail.com' in lower:
-        return 'RODOLFO_DSCR', output
-    if 'cogocapital.com' in lower or 'cheltenham' in lower:
-        return 'CHELTENHAM', output
-    if 'giancarloyacarine@gmail.com' in lower or 'sherbourne' in lower:
-        return 'HOUSTON_SHEUN', output
-    if 'jamonewoodley@yahoo.com' in lower or 'scbinnovativesolutions@gmail.com' in lower or 'conley downs' in lower:
-        return 'CONLEY_DOWNS', output
+
+    if "youngs" in lower or "nashville" in lower or "tanya" in lower or "sognare" in lower:
+        return "NASHVILLE_URGENT", output
+    if "coalson" in lower or "kennedy" in lower or "wolfer" in lower or "bohnker" in lower:
+        return "COALSON", output
+    if "acj" in lower or "nic bray" in lower or "zendejas" in lower or "jz" in lower:
+        return "ACJ", output
+    if "nikita" in lower or "baker" in lower or "unitas" in lower:
+        return "NIKITA", output
     return None, output
 
 
-def parse_live_deal_priority() -> str | None:
-    deals = read_text(DEALS)
-    if 'Jason Coalson' in deals and ('Structuring' in deals or 'Under Review' in deals):
-        return 'COALSON_LAND'
-    if 'Nic Bray' in deals and 'Structuring' in deals:
-        return 'NIC_BRAY'
-    if 'Kwami Fox' in deals and 'Under Review' in deals:
-        return 'CHELTENHAM'
-    return None
+# ─── ACTION GENERATOR ──────────────────────────────────────────────────────────
+
+def build_action_list(deals: list[dict], stale_pipeline: list[dict], inbox_signal: str | None) -> list[dict]:
+    """Build prioritized action list from all signals."""
+    actions = []
+
+    # Critical deadline first
+    if inbox_signal == "NASHVILLE_URGENT" or any(d.get("name") == "Nashville Transactional" for d in deals):
+        actions.append({
+            "priority": 1,
+            "deal": "Nashville Transactional — Youngs Lane LLC",
+            "action": "Confirm closing status with Tanya Waymire at Sognare. April 20 deadline.",
+            "type": "follow_up",
+            "urgency": "CRITICAL — deadline in days"
+        })
+
+    # High priority active deals
+    if inbox_signal == "COALSON" or any(d.get("name") == "Coalson Excavation" for d in deals):
+        actions.append({
+            "priority": 2,
+            "deal": "Coalson Excavation — $11M Texas land bridge",
+            "action": "Follow up with Chase Wolfer and Andrew Bohnker at Kennedy Funding on submission status.",
+            "type": "lender_follow_up",
+            "urgency": "HIGH — active submission"
+        })
+
+    if inbox_signal == "ACJ" or any(d.get("name") == "ACJ Built" for d in deals):
+        actions.append({
+            "priority": 3,
+            "deal": "ACJ Built — construction bridge",
+            "action": "Check with Nic Bray on deal intake completion. Confirm lender match status.",
+            "type": "borrower_follow_up",
+            "urgency": "HIGH — in structuring"
+        })
+
+    if inbox_signal == "NIKITA" or any(d.get("name") == "Nikita Baker" for d in deals):
+        actions.append({
+            "priority": 4,
+            "deal": "Nikita Baker — Newport News VA gap funding",
+            "action": "Check private lender responses to pitch deck. Follow up with any warm contacts.",
+            "type": "lender_follow_up",
+            "urgency": "HIGH — gap funding active"
+        })
+
+    # Stale pipeline items
+    for item in stale_pipeline[:3]:
+        actions.append({
+            "priority": 5,
+            "deal": item["file"].replace(".md", ""),
+            "action": f"Pipeline file not updated in {item['hours_ago']} hours. Review and update status.",
+            "type": "pipeline_maintenance",
+            "urgency": "MEDIUM — stale data"
+        })
+
+    # Default content if nothing urgent
+    if not actions:
+        actions.append({
+            "priority": 99,
+            "deal": "General",
+            "action": "No urgent deal signals tonight. Draft capital placement content or research new lender targets.",
+            "type": "content",
+            "urgency": "LOW"
+        })
+
+    return sorted(actions, key=lambda x: x["priority"])
 
 
-def choose_task() -> tuple[str, str, Path, str]:
-    open_loops = read_text(OPEN_LOOPS)
-    active = read_text(ACTIVE)
-    deals = read_text(DEALS)
-    signal, inbox_debug = inbox_signal()
-    live_priority = parse_live_deal_priority()
-    today = dt.date.today().isoformat()
+# ─── OUTPUT WRITERS ─────────────────────────────────────────────────────────────
 
-    if signal == 'RODOLFO_DSCR':
-        out = FOLLOWUPS_DIR / f'{today}-rodolfo-followup.md'
-        content = f"""# Follow Up — Rodolfo DSCR
+def write_overnight_report(actions: list[dict], deals: list[dict], stale: list[dict], inbox_signal: str | None) -> Path:
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    report_path = REPORTS_DIR / f"{TODAY}-overnight-report.md"
 
-[PROJECT: RODOLFO_DSCR]
+    lines = [
+        f"# LEX Night Operator Report — {TODAY}",
+        f"Generated: {NOW.strftime('%Y-%m-%d %H:%M PST')}",
+        "",
+        "---",
+        "",
+        "## Inbox Signal",
+        f"Signal detected: {inbox_signal or 'None'}",
+        "",
+        "## Active Deals Scanned",
+    ]
 
-Suggested message:
+    for d in deals:
+        flags = ", ".join(d.get("flags", [])) or "none"
+        lines.append(f"- {d.get('name', d['raw'][:40])} — status: {d['status']} — flags: {flags}")
 
-Got it. Before I ask for a corrected quote, I need to verify your exact payoff. Please send the latest mortgage statement or payoff letter when you can so I can tighten the numbers.
+    lines += [
+        "",
+        f"## Stale Pipeline Files ({len(stale)} found)",
+    ]
+    for s in stale:
+        lines.append(f"- {s['file']} — last updated {s['hours_ago']}h ago")
 
-Why this won tonight:
-- there is recent borrower inbox activity
-- quote inputs appear inconsistent
-- correcting payoff is the fastest path to movement
+    lines += [
+        "",
+        "## Prioritized Action List",
+        "",
+    ]
+    for i, action in enumerate(actions, 1):
+        lines += [
+            f"### {i}. {action['deal']}",
+            f"**Urgency:** {action['urgency']}",
+            f"**Action:** {action['action']}",
+            f"**Type:** {action['type']}",
+            "",
+        ]
 
-Inbox signal used:
-```text
-{inbox_debug.strip()[:2000]}
-```
-"""
-        return 'Borrower follow-up', 'Inbox first logic found Rodolfo activity — payoff clarification is highest leverage.', out, content
+    lines += [
+        "---",
+        "",
+        "## Recommended First Move for Alex",
+        f"{actions[0]['action'] if actions else 'Review pipeline and update deal statuses.'}",
+        "",
+        "*Generated by LEX Night Operator v2*",
+    ]
 
-    if signal == 'CHELTENHAM' or live_priority == 'CHELTENHAM':
-        out = FOLLOWUPS_DIR / f'{today}-cheltenham-followup.md'
-        content = f"""# Follow Up — Cheltenham
+    report_path.write_text("\n".join(lines))
+    return report_path
 
-[PROJECT: CHELTENHAM]
 
-Suggested message:
+def write_top_followup(action: dict) -> Path:
+    FOLLOWUPS_DIR.mkdir(parents=True, exist_ok=True)
+    slug = action["deal"].lower().replace(" ", "-").replace("—", "").replace("$", "").strip("-")[:30]
+    out = FOLLOWUPS_DIR / f"{TODAY}-{slug}-followup.md"
 
-Hi Leah,
+    if action["type"] == "lender_follow_up":
+        if "coalson" in action["deal"].lower():
+            body = """Subject: Follow up — Coalson Excavation bridge request
 
-Following up on Cheltenham. Wanted to check whether there is any update on underwriting, inspection handling, or anything still needed from our side to keep the file moving.
+Hi Chase / Andrew,
 
-If there is an issue blocking progress, send me the exact item and I will work it.
+Following up on the Coalson Excavation bridge request for the three Texas parcels.
 
-Alex
+Submitted at roughly 39% LTV. Wanted to check where it stands and whether anything else is needed to move toward a term sheet or formal feedback.
 
-Why this won tonight:
-- inbox showed Cheltenham related lender activity
-- deals file marks it under review
-- lender movement beats passive waiting
-"""
-        return 'Lender follow-up', 'Inbox and live deal file both point to Cheltenham as active and worth pushing.', out, content
+Happy to resend the package or tighten the summary if helpful.
 
-    if 'COALSON_LAND' in open_loops or 'COALSON_LAND' in active or live_priority == 'COALSON_LAND':
-        out = FOLLOWUPS_DIR / f'{today}-coalson-lender-followup.md'
-        content = f"""# Follow Up — Coalson Land
-
-[PROJECT: COALSON_LAND]
-
-Subject: Quick follow up on Coalson Excavation bridge request
+Alex Angus
+718-219-9382"""
+        elif "nikita" in action["deal"].lower():
+            body = """Subject: Follow up — Newport News VA gap funding
 
 Hi,
 
-Wanted to follow up on the Coalson Excavation bridge request for the three Texas parcels.
+Following up on the gap funding request for the Newport News VA ground-up project.
 
-This one came in at roughly 39% LTV, so I wanted to see where it stands on your side and whether anything else is needed to move it toward a term sheet or formal feedback.
+ARV is $425K, senior loan through Unitas, $60K gap. Pitch deck was submitted. Wanted to check if you had a chance to review and whether there are any questions.
 
-If helpful, I can resend the package or tighten the summary.
+Alex Angus
+718-219-9382"""
+        else:
+            body = f"""Subject: Follow up — {action["deal"]}
 
-Alex
+Hi,
 
-Why this won tonight:
-- live deal file still shows active structuring work
-- direct lender movement is the fastest route to revenue progress
-"""
-        return 'Lender follow-up', 'Live deal file points to Coalson as the best remaining leverage move.', out, content
+Following up on the above deal. Wanted to check on status and whether anything is needed from our side to keep it moving.
 
-    if 'Nic Bray' in deals or live_priority == 'NIC_BRAY':
-        out = FOLLOWUPS_DIR / f'{today}-nic-bray-checklist.md'
-        content = f"""# Structuring Checklist — Nic Bray
+Alex Angus
+718-219-9382"""
 
-[PROJECT: NIC_BRAY]
+    elif action["type"] == "borrower_follow_up":
+        body = f"""Subject: Quick check in — {action["deal"]}
 
-Priority items to request or confirm:
-- full property address
-- project scope
-- total loan request
-- budget and timeline
-- construction lender fit
+Hi,
 
-Why this won tonight:
-- the live deals file still shows structuring work in progress
-- better packaging improves lender match speed
-"""
-        return 'Structuring task', 'Live deals file shows Nic Bray still needs a cleaner package.', out, content
+Just checking in on your end. Wanted to confirm we have everything needed to move forward and that nothing has changed on the deal.
 
-    # Default: content draft
-    out = CONTENT_DIR / f'{today}-capital-post.md'
-    content = f"""# Content Draft — {today}
+If there are any updates or new information, send it over and I will keep the file moving.
 
-Topic: Why most borrowers wait too long to fix deal structure
+Alex Angus
+718-219-9382"""
 
-Strong deals do not just need capital. They need timing, structure, and clean information.
+    else:
+        body = f"Action item: {action['action']}\n\nDeal: {action['deal']}\nUrgency: {action['urgency']}"
 
-A lot of deals die before they ever get a real look because the borrower waits too long to clarify payoff, docs, exit, or entity structure.
-
-The earlier you tighten the file, the more options you have.
-
----
-
-Hook options:
-1. "Most deals don't die because of the property. They die because of the paperwork."
-2. "Capital is available. Clean deals get it. Here's what that means."
-3. "I've seen $2M deals fall apart in week 3 of underwriting. Here's the pattern."
-"""
-    return 'Content draft', 'No live deal blocker tonight — educational content asset is highest remaining leverage.', out, content
+    out.write_text(f"# Follow Up Draft — {action['deal']}\n\nGenerated: {TODAY}\n\n---\n\n{body}\n")
+    return out
 
 
-def write_report(task_name: str, reason: str, output_path: Path) -> Path:
-    today = dt.date.today().isoformat()
-    report = REPORTS_DIR / f"{today}-overnight-report.md"
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    report.write_text(
-        f"OPENCLAW OVERNIGHT REPORT — {today}\n\n"
-        f"Task completed: {task_name}\n\n"
-        f"Output saved to: {output_path}\n\n"
-        f"Key finding or result: {reason}\n\n"
-        f"Recommended next action for Alex: Review the output and act on it if tied to a live deal.\n"
-    )
-    return report
-
-
-def append_daily_log(task_name: str, output_path: Path):
-    stamp = dt.datetime.now(dt.UTC).strftime('%Y-%m-%d %H:%M UTC')
+def append_daily_log(report_path: Path, top_action: dict):
     DAILY_LOG.parent.mkdir(parents=True, exist_ok=True)
     if not DAILY_LOG.exists():
-        DAILY_LOG.write_text(f"# {dt.date.today().isoformat()}\n\n")
-    with DAILY_LOG.open('a') as f:
+        DAILY_LOG.write_text(f"# {TODAY}\n\n")
+    stamp = NOW.strftime("%Y-%m-%d %H:%M PST")
+    with DAILY_LOG.open("a") as f:
         f.write(
-            f"\n---\n\n## Night Operator\n\n"
-            f"Task completed: {task_name}\n"
-            f"Output saved to: {output_path}\n"
+            f"\n---\n\n## Night Operator v2\n\n"
+            f"Report: {report_path}\n"
+            f"Top action: {top_action['action']}\n"
             f"Generated at: {stamp}\n"
         )
 
 
+# ─── MAIN ───────────────────────────────────────────────────────────────────────
+
 def main():
-    task_name, reason, output_path, content = choose_task()
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(content)
-    report = write_report(task_name, reason, output_path)
-    append_daily_log(task_name, output_path)
-    print('TASK:', task_name)
-    print('OUTPUT:', output_path)
-    print('REPORT:', report)
-    print('REASON:', reason)
+    print(f"LEX Night Operator v2 — {TODAY}")
+    print("Scanning deals, pipeline, inbox...")
+
+    deals         = scan_deals()
+    stale         = scan_pipeline_files()
+    signal, _raw  = scan_inbox()
+    actions       = build_action_list(deals, stale, signal)
+
+    print(f"Deals found: {len(deals)}")
+    print(f"Stale pipeline files: {len(stale)}")
+    print(f"Inbox signal: {signal}")
+    print(f"Actions generated: {len(actions)}")
+
+    report_path = write_overnight_report(actions, deals, stale, signal)
+    followup    = write_top_followup(actions[0])
+    append_daily_log(report_path, actions[0])
+
+    print(f"Report: {report_path}")
+    print(f"Top followup: {followup}")
+    print(f"Top action: {actions[0]['action']}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
