@@ -24,3 +24,4 @@ telegram-bridge-config.json
 # Python cache
 __pycache__/
 *.pyc
+bots/telegram-bridge/telegram-bridge-config.TEMPLATE.json
