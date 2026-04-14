@@ -50,51 +50,27 @@ def run_gmail_search(query: str) -> str:
 # ─── DEAL SCANNER ──────────────────────────────────────────────────────────────
 
 def scan_deals() -> list[dict]:
-    """Parse deals.md and return structured deal list with status flags."""
+    """Parse deals.md - only reads Deal sections, skips dead deals."""
     deals_text = read_text(DEALS)
     deals = []
-
-    active_keywords = ["structuring", "under review", "submitted", "active", "pending", "in progress"]
-    stall_keywords  = ["waiting", "stalled", "no response", "follow up needed", "unclear"]
-    dead_keywords   = ["dead", "cancelled", "passed", "withdrawn"]
-
-    for line in deals_text.splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or line.startswith("|--"):
+    blocks = [b for b in deals_text.split("### Deal") if b.strip()]
+    for block in blocks:
+        lower = block.lower()
+        if any(k in lower for k in ["dead","cancelled","passed","withdrew","fell through"]):
             continue
-        lower = line.lower()
-
-        if any(k in lower for k in dead_keywords):
-            continue
-
-        deal = {"raw": line, "status": "unknown", "flags": []}
-
-        if any(k in lower for k in active_keywords):
-            deal["status"] = "active"
-        if any(k in lower for k in stall_keywords):
-            deal["flags"].append("stalled")
-        if "coalson" in lower:
-            deal["name"] = "Coalson Excavation"
-            deal["priority"] = "high"
-        elif "acj" in lower or "nic bray" in lower:
-            deal["name"] = "ACJ Built"
-            deal["priority"] = "high"
-        elif "nikita" in lower or "baker" in lower:
-            deal["name"] = "Nikita Baker"
-            deal["priority"] = "high"
-        elif "youngs lane" in lower or "nashville" in lower or "tanya" in lower:
-            deal["name"] = "Nashville Transactional"
-            deal["priority"] = "critical"
-            deal["flags"].append("deadline")
-        else:
-            deal["name"] = line[:40]
-            deal["priority"] = "normal"
-
+        deal = {"raw": block[:80].strip(), "status": "unknown", "flags": []}
+        if "structuring" in lower: deal["status"] = "structuring"
+        elif "under review" in lower: deal["status"] = "under review"
+        elif "submitted" in lower: deal["status"] = "submitted"
+        if "coalson" in lower: deal["name"] = "Coalson Excavation"; deal["priority"] = "high"
+        elif "nic bray" in lower or "acj" in lower: deal["name"] = "ACJ Built"; deal["priority"] = "high"
+        elif "nikita" in lower or "baker" in lower: deal["name"] = "Nikita Baker"; deal["priority"] = "high"
+        elif "youngs" in lower or "nashville" in lower: deal["name"] = "Nashville Transactional"; deal["priority"] = "critical"; deal["flags"].append("deadline")
+        elif "kwami" in lower or "cheltenham" in lower: deal["name"] = "Cheltenham"; deal["priority"] = "medium"
+        elif "gheorghe" in lower or "cucu" in lower: deal["name"] = "Gheorghe Cucu"; deal["priority"] = "medium"
+        else: deal["name"] = block.strip().splitlines()[0][:50]; deal["priority"] = "normal"
         deals.append(deal)
-
     return deals
-
-
 def scan_pipeline_files() -> list[dict]:
     """Check pipeline folder for recent followup files and flag stale ones."""
     stale = []
