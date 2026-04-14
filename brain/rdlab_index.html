@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEX R&amp;D Lab v3</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0c;--surface:#111114;--surface2:#1a1a1f;--surface3:#222228;
+  --accent:#e8ff47;--text:#e0e0e0;--text-dim:#888;--text-bright:#fff;
+  --blue:#47b8ff;--red:#ff4747;--green:#47ff8f;--orange:#ff8f47;
+  --radius:10px;--radius-sm:6px;
+}
+html{font-size:15px}
+body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;min-height:100vh;overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Syne',sans-serif;color:var(--text-bright)}
+button{cursor:pointer;font-family:'Syne',sans-serif}
+input,textarea{font-family:'Space Mono',monospace}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--surface3);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--text-dim)}
+
+/* HEADER */
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid #1e1e24;position:sticky;top:0;z-index:100;background:var(--bg);backdrop-filter:blur(12px)}
+.header-left{display:flex;align-items:center;gap:12px}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;color:var(--text-bright);letter-spacing:-0.5px}
+.version-badge{background:var(--accent);color:#0a0a0c;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:20px;font-family:'Syne',sans-serif}
+.tab-nav{display:flex;gap:4px}
+.tab-btn{background:transparent;border:none;color:var(--text-dim);font-size:.85rem;padding:8px 18px;border-radius:var(--radius-sm);transition:all .2s}
+.tab-btn:hover{color:var(--text);background:var(--surface)}
+.tab-btn.active{color:var(--accent);background:var(--surface2)}
+.header-right{display:flex;align-items:center;gap:12px}
+.key-btn{background:transparent;border:1px solid var(--surface3);color:var(--text-dim);font-size:.8rem;padding:6px 12px;border-radius:var(--radius-sm);display:flex;align-items:center;gap:6px;transition:all .2s}
+.key-btn:hover{border-color:var(--accent);color:var(--accent)}
+.key-icon{font-size:1rem}
+
+/* TABS */
+.tab-content{display:none;padding:28px;max-width:1400px;margin:0 auto;animation:fadeIn .3s ease}
+.tab-content.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* LAB TAB */
+.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:900px){.lab-grid{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--surface3);border-radius:var(--radius);padding:20px}
+.panel-title{font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:14px;font-family:'Syne',sans-serif;font-weight:700}
+.field-group{margin-bottom:14px}
+.field-label{font-size:.7rem;color:var(--text-dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:1px}
+textarea.lab-input{width:100%;background:var(--surface2);border:1px solid var(--surface3);color:var(--text);padding:12px;border-radius:var(--radius-sm);resize:vertical;min-height:80px;font-size:.82rem;transition:border-color .2s;line-height:1.6}
+textarea.lab-input:focus{outline:none;border-color:var(--accent)}
+input.deal-input{width:100%;background:var(--surface2);border:1px solid var(--surface3);color:var(--text);padding:10px 12px;border-radius:var(--radius-sm);font-size:.8rem;transition:border-color .2s}
+input.deal-input:focus{outline:none;border-color:var(--accent)}
+.deal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.deal-grid{grid-template-columns:1fr}}
+
+.run-bar{margin-top:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.run-btn{background:var(--accent);color:#0a0a0c;font-weight:700;font-size:.95rem;padding:14px 32px;border:none;border-radius:var(--radius);transition:all .2s;letter-spacing:-.3px}
+.run-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.run-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.status-bar{display:flex;align-items:center;gap:12px;font-size:.72rem;color:var(--text-dim)}
+.status-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.status-dot.green{background:var(--green)}
+.status-dot.yellow{background:var(--accent)}
+.status-dot.red{background:var(--red)}
+.status-dot.off{background:var(--surface3)}
+
+/* AGENT CARDS */
+.debate-section{margin-top:28px}
+.debate-section .panel-title{margin-bottom:18px}
+.agent-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.agent-card{background:var(--surface);border:1px solid var(--surface3);border-radius:var(--radius);padding:18px 20px;border-left:4px solid var(--surface3);transition:all .3s;opacity:.4}
+.agent-card.active{opacity:1}
+.agent-card.done{opacity:1}
+.agent-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.agent-name{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;color:var(--text-bright)}
+.agent-role{font-size:.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px}
+.agent-body{font-size:.8rem;line-height:1.7;color:var(--text);white-space:pre-wrap}
+.typing-dots{display:inline-flex;gap:4px;padding:4px 0}
+.typing-dots span{width:6px;height:6px;border-radius:50%;background:var(--text-dim);animation:bounce .6s infinite alternate}
+.typing-dots span:nth-child(2){animation-delay:.15s}
+.typing-dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{to{opacity:.3;transform:translateY(-4px)}}
+
+/* MEMO TAB */
+.memo-container{max-width:900px;margin:0 auto}
+.memo-card{background:var(--surface);border:1px solid var(--surface3);border-radius:var(--radius);padding:22px;margin-bottom:16px;transition:all .3s}
+.memo-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.memo-highlight{border-left:4px solid var(--accent)}
+.memo-highlight .memo-card-title{color:var(--accent)}
+.memo-blue{border-left:4px solid var(--blue)}
+.memo-blue .memo-card-title{color:var(--blue)}
+.memo-orange{border-left:4px solid var(--orange)}
+.memo-orange .memo-card-title{color:var(--orange)}
+.memo-text{font-size:.82rem;line-height:1.7}
+.score-pill{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:.65rem;font-weight:700;font-family:'Syne',sans-serif}
+.score-revenue{background:rgba(71,255,143,.15);color:var(--green)}
+.score-speed{background:rgba(71,184,255,.15);color:var(--blue)}
+.score-effort{background:rgba(255,143,71,.15);color:var(--orange)}
+.opp-item{background:var(--surface2);border-radius:var(--radius-sm);padding:14px;margin-bottom:10px}
+.opp-text{font-size:.82rem;margin-bottom:8px;line-height:1.6}
+.opp-scores{display:flex;gap:8px;flex-wrap:wrap}
+.next24-list{list-style:none;counter-reset:steps}
+.next24-list li{counter-increment:steps;padding:10px 0;border-bottom:1px solid var(--surface3);font-size:.82rem;line-height:1.6;display:flex;align-items:flex-start;gap:12px}
+.next24-list li:last-child{border-bottom:none}
+.step-num{background:var(--accent);color:#0a0a0c;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0;font-family:'Syne',sans-serif}
+.memo-empty{text-align:center;padding:80px 20px;color:var(--text-dim);font-size:.85rem}
+
+/* VAULT TAB */
+.vault-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.vault-card{background:var(--surface);border:1px solid var(--surface3);border-radius:var(--radius);padding:18px}
+.vault-text{font-size:.82rem;line-height:1.6;margin-bottom:12px}
+.vault-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.vault-tag{background:var(--surface3);color:var(--text-dim);font-size:.6rem;padding:3px 8px;border-radius:12px;text-transform:uppercase;letter-spacing:.5px}
+.vault-scores{display:flex;gap:8px;flex-wrap:wrap}
+.vault-empty{text-align:center;padding:80px 20px;color:var(--text-dim);font-size:.85rem}
+.vault-date{font-size:.65rem;color:var(--text-dim);margin-top:10px}
+
+/* HISTORY TAB */
+.history-list{max-width:900px;margin:0 auto}
+.history-item{background:var(--surface);border:1px solid var(--surface3);border-radius:var(--radius);padding:18px;margin-bottom:10px;cursor:pointer;transition:all .2s}
+.history-item:hover{border-color:var(--accent);transform:translateX(4px)}
+.history-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.history-date{font-size:.7rem;color:var(--text-dim)}
+.history-goal{font-size:.82rem;color:var(--text-bright);font-family:'Syne',sans-serif;font-weight:600}
+.history-working{font-size:.75rem;color:var(--text-dim);margin-top:6px;line-height:1.5}
+.history-empty{text-align:center;padding:80px 20px;color:var(--text-dim);font-size:.85rem}
+
+/* API KEY MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:999;display:flex;align-items:center;justify-content:center;animation:fadeIn .2s ease}
+.modal{background:var(--surface);border:1px solid var(--surface3);border-radius:var(--radius);padding:32px;max-width:460px;width:90%}
+.modal h3{font-size:1.1rem;margin-bottom:8px}
+.modal p{font-size:.78rem;color:var(--text-dim);margin-bottom:20px;line-height:1.6}
+.modal input{width:100%;background:var(--surface2);border:1px solid var(--surface3);color:var(--text);padding:12px;border-radius:var(--radius-sm);font-size:.82rem;font-family:'Space Mono',monospace;margin-bottom:16px}
+.modal input:focus{outline:none;border-color:var(--accent)}
+.modal-btns{display:flex;gap:10px;justify-content:flex-end}
+.modal-btn{padding:10px 22px;border:none;border-radius:var(--radius-sm);font-size:.82rem;font-weight:600;font-family:'Syne',sans-serif;transition:all .15s}
+.modal-btn.primary{background:var(--accent);color:#0a0a0c}
+.modal-btn.primary:hover{filter:brightness(1.1)}
+.modal-btn.secondary{background:var(--surface3);color:var(--text)}
+.modal-btn.secondary:hover{background:var(--surface2)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header{flex-wrap:wrap;gap:12px;padding:14px 16px}
+  .tab-nav{order:3;width:100%;justify-content:center}
+  .tab-content{padding:16px}
+  .lab-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <span class="logo">LEX R&amp;D Lab</span>
+    <span class="version-badge">v3</span>
+  </div>
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="lab">Lab</button>
+    <button class="tab-btn" data-tab="memo">Memo</button>
+    <button class="tab-btn" data-tab="vault">Vault</button>
+    <button class="tab-btn" data-tab="history">History</button>
+  </nav>
+  <div class="header-right">
+    <button class="key-btn" id="keyBtn"><span class="key-icon">&#128273;</span> API Key</button>
+  </div>
+</header>
+
+<!-- LAB TAB -->
+<div class="tab-content active" id="tab-lab">
+  <div class="lab-grid">
+    <div>
+      <div class="panel">
+        <div class="panel-title">Session Inputs</div>
+        <div class="field-group">
+          <div class="field-label">Working On</div>
+          <textarea class="lab-input" id="workingOn" placeholder="What are you focused on right now?"></textarea>
+        </div>
+        <div class="field-group">
+          <div class="field-label">What's Stuck</div>
+          <textarea class="lab-input" id="stuck" placeholder="Where are you blocked?"></textarea>
+        </div>
+        <div class="field-group">
+          <div class="field-label">Goal</div>
+          <textarea class="lab-input" id="goal" placeholder="What outcome are you driving toward?"></textarea>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="panel-title">Deal Context</div>
+        <div class="deal-grid">
+          <div class="field-group">
+            <div class="field-label">Purchase Price</div>
+            <input class="deal-input" id="dealPrice" placeholder="$0">
+          </div>
+          <div class="field-group">
+            <div class="field-label">Rent / Income</div>
+            <input class="deal-input" id="dealRent" placeholder="$0/mo">
+          </div>
+          <div class="field-group">
+            <div class="field-label">Borrower Profile</div>
+            <input class="deal-input" id="dealBorrower" placeholder="FICO, experience, etc.">
+          </div>
+          <div class="field-group">
+            <div class="field-label">Lender Options</div>
+            <input class="deal-input" id="dealLender" placeholder="Which lenders considered?">
+          </div>
+          <div class="field-group">
+            <div class="field-label">State / Market</div>
+            <input class="deal-input" id="dealMarket" placeholder="e.g. TX - Dallas">
+          </div>
+          <div class="field-group">
+            <div class="field-label">Deal Blocker</div>
+            <input class="deal-input" id="dealBlocker" placeholder="Primary issue holding deal up">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="run-bar">
+    <button class="run-btn" id="runBtn">Run Board Session</button>
+    <div class="status-bar">
+      <span class="status-dot off" id="dbDot"></span>
+      <span id="dbStatus">Checking DB...</span>
+      <span style="margin-left:12px" class="status-dot off" id="sessionDot"></span>
+      <span id="sessionStatus">Idle</span>
+    </div>
+  </div>
+
+  <div class="debate-section">
+    <div class="panel-title">Board Debate</div>
+    <div class="agent-grid" id="agentGrid">
+      <div class="agent-card" id="card-strategist" style="border-left-color:#e8ff47">
+        <div class="agent-header">
+          <span class="agent-name" style="color:#e8ff47">Strategist</span>
+          <span class="agent-role">Revenue Strategy</span>
+        </div>
+        <div class="agent-body" id="body-strategist">Waiting for session...</div>
+      </div>
+      <div class="agent-card" id="card-builder" style="border-left-color:#47b8ff">
+        <div class="agent-header">
+          <span class="agent-name" style="color:#47b8ff">Builder</span>
+          <span class="agent-role">Systems &amp; Automation</span>
+        </div>
+        <div class="agent-body" id="body-builder">Waiting for session...</div>
+      </div>
+      <div class="agent-card" id="card-analyst" style="border-left-color:#ff4747">
+        <div class="agent-header">
+          <span class="agent-name" style="color:#ff4747">Analyst</span>
+          <span class="agent-role">Validation &amp; Analysis</span>
+        </div>
+        <div class="agent-body" id="body-analyst">Waiting for session...</div>
+      </div>
+      <div class="agent-card" id="card-growth" style="border-left-color:#47ff8f">
+        <div class="agent-header">
+          <span class="agent-name" style="color:#47ff8f">Growth</span>
+          <span class="agent-role">Acquisition Tactics</span>
+        </div>
+        <div class="agent-body" id="body-growth">Waiting for session...</div>
+      </div>
+      <div class="agent-card" id="card-critic" style="border-left-color:#ff8f47">
+        <div class="agent-header">
+          <span class="agent-name" style="color:#ff8f47">Critic</span>
+          <span class="agent-role">Risk &amp; Waste</span>
+        </div>
+        <div class="agent-body" id="body-critic">Waiting for session...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEMO TAB -->
+<div class="tab-content" id="tab-memo">
+  <div class="memo-container" id="memoContainer">
+    <div class="memo-empty">No memo yet. Run a board session first.</div>
+  </div>
+</div>
+
+<!-- VAULT TAB -->
+<div class="tab-content" id="tab-vault">
+  <div id="vaultContainer">
+    <div class="vault-empty">Loading ideas...</div>
+  </div>
+</div>
+
+<!-- HISTORY TAB -->
+<div class="tab-content" id="tab-history">
+  <div class="history-list" id="historyContainer">
+    <div class="history-empty">Loading sessions...</div>
+  </div>
+</div>
+
+<!-- API KEY MODAL -->
+<div class="modal-overlay" id="keyModal" style="display:none">
+  <div class="modal">
+    <h3>Anthropic API Key</h3>
+    <p>Enter your Anthropic API key to power the board agents. The key is stored locally in your browser only.</p>
+    <input type="password" id="keyInput" placeholder="sk-ant-...">
+    <div class="modal-btns">
+      <button class="modal-btn secondary" id="keyCancelBtn">Cancel</button>
+      <button class="modal-btn primary" id="keySaveBtn">Save Key</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── CONFIG ──
+  var SUPABASE_URL = 'https://sggfuxepiaxintmqecqb.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNnZ2Z1eGVwaWF4aW50bXFlY3FiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI2NjAyMDEsImV4cCI6MjA4ODIzNjIwMX0.x6SZ3BNLC05fNamVc2fpBfsMvnNiVZfc_CfevLv7MCU';
+  var ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
+  var MODEL = 'claude-sonnet-4-20250514';
+
+  // ── AGENT DEFINITIONS ──
+  var AGENTS = [
+    {
+      id: 'strategist',
+      name: 'Strategist',
+      system: 'You are a revenue strategist for Liberty Equity Xchange (LEX) \u2014 a commercial loan brokerage placing hard money, bridge, DSCR, and construction loans. Only recommend ideas that generate income within 30 days. Tie every recommendation to: more deals, higher fees, or faster closings. No generic advice. 3-5 bullet points max.'
+    },
+    {
+      id: 'builder',
+      name: 'Builder',
+      system: 'You are a systems builder for a commercial loan broker with GHL CRM, Supabase, Telegram bots, n8n automations. Only suggest builds that directly accelerate deal closings or lead intake. Be specific \u2014 name the exact tool or workflow. Must be buildable with limited time. 3-5 bullet points max.'
+    },
+    {
+      id: 'analyst',
+      name: 'Analyst',
+      system: 'You are a hard-nosed analyst for a real estate capital placement business targeting $100K/month. Validate or kill assumptions. Time is scarce (operator has W2 job). Point out where effort exceeds return. Flag ideas that won\'t produce income within 30 days. 3-5 bullet points max.'
+    },
+    {
+      id: 'growth',
+      name: 'Growth',
+      system: 'You are a growth tactician for a commercial loan broker focused on DSCR, hard money, bridge, construction deals. Only suggest tactics that attract qualified borrowers or lender partners. Scrappy and direct. Avoid vanity metrics \u2014 only moves resulting in submitted apps or funded deals. 3-5 bullet points max.'
+    },
+    {
+      id: 'critic',
+      name: 'Critic',
+      system: 'You are the board critic for a capital placement operation. Identify the 2-3 biggest risks or mistakes in the current approach. Call out where the operator is wasting time. Flag distractions from the core revenue path. 3-5 bullet points max. Be direct.'
+    }
+  ];
+
+  var SYNTHESIS_SYSTEM = 'You are the capital desk decision synthesizer for Liberty Equity Xchange. Respond ONLY with raw JSON, no markdown, no fences. Schema: { "opportunities": [{"text": string, "revenue": number, "speed": number, "effort": number}], "fastestMove": string, "dealInsight": string|null, "risk": string, "buildNext": string, "next24h": [string, string, string], "ideas": [{"text": string, "tags": [string], "revenue": number, "speed": number, "effort": number}] }. Revenue/Speed/Effort are 1-10 scores. Be specific to real estate capital placement.';
+
+  // ── STATE ──
+  var currentMemo = null;
+  var currentSessionId = null;
+  var agentResponses = {};
+
+  // ── UTILITY ──
+  function esc(str) {
+    if (!str) return '';
+    var d = document.createElement('div');
+    d.textContent = String(str);
+    return d.innerHTML;
+  }
+
+  function $(id) { return document.getElementById(id); }
+
+  // ── SUPABASE HELPERS ──
+  function sbFetch(path, opts) {
+    opts = opts || {};
+    var headers = {
+      'apikey': SUPABASE_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': opts.prefer || 'return=representation'
+    };
+    return fetch(SUPABASE_URL + '/rest/v1/' + path, {
+      method: opts.method || 'GET',
+      headers: headers,
+      body: opts.body ? JSON.stringify(opts.body) : undefined
+    });
+  }
+
+  function checkDb() {
+    var dot = $('dbDot');
+    var status = $('dbStatus');
+    sbFetch('rd_sessions?select=id&limit=1')
+      .then(function(res) {
+        if (res.ok) {
+          dot.className = 'status-dot green';
+          status.textContent = 'DB connected';
+        } else {
+          dot.className = 'status-dot red';
+          status.textContent = 'DB error: ' + res.status;
+        }
+      })
+      .catch(function() {
+        dot.className = 'status-dot red';
+        status.textContent = 'DB offline';
+      });
+  }
+
+  // ── ANTHROPIC HELPER ──
+  function callAgent(systemPrompt, userMessage) {
+    var key = localStorage.getItem('anthropic_api_key');
+    if (!key) return Promise.reject(new Error('No API key'));
+    return fetch(ANTHROPIC_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userMessage }]
+      })
+    }).then(function(res) {
+      if (!res.ok) {
+        return res.text().then(function(errText) {
+          throw new Error('API ' + res.status + ': ' + errText);
+        });
+      }
+      return res.json();
+    }).then(function(data) {
+      return data.content[0].text;
+    });
+  }
+
+  // ── TYPING DOTS ──
+  function showTyping(agentId) {
+    $('body-' + agentId).innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+    $('card-' + agentId).classList.add('active');
+  }
+
+  function showResponse(agentId, text) {
+    $('body-' + agentId).textContent = text;
+    var card = $('card-' + agentId);
+    card.classList.remove('active');
+    card.classList.add('done');
+  }
+
+  function showError(agentId, err) {
+    $('body-' + agentId).innerHTML = '<span style="color:var(--red)">Error: ' + esc(err) + '</span>';
+    $('card-' + agentId).classList.remove('active');
+  }
+
+  // ── DEAL CONTEXT ──
+  function getDealContext() {
+    return {
+      purchase_price: $('dealPrice').value.trim(),
+      rent_income: $('dealRent').value.trim(),
+      borrower_profile: $('dealBorrower').value.trim(),
+      lender_options: $('dealLender').value.trim(),
+      state_market: $('dealMarket').value.trim(),
+      deal_blocker: $('dealBlocker').value.trim()
+    };
+  }
+
+  // ── BUILD USER MESSAGE ──
+  function buildUserMessage() {
+    var workingOn = $('workingOn').value.trim();
+    var stuck = $('stuck').value.trim();
+    var goal = $('goal').value.trim();
+    var msg = 'WORKING ON: ' + (workingOn || 'Not specified') + '\n\n';
+    msg += 'WHAT\'S STUCK: ' + (stuck || 'Not specified') + '\n\n';
+    msg += 'GOAL: ' + (goal || 'Not specified');
+
+    var dc = getDealContext();
+    var hasDeal = Object.values(dc).some(function(v) { return v; });
+    if (hasDeal) {
+      msg += '\n\nDEAL CONTEXT:';
+      if (dc.purchase_price) msg += '\n- Purchase Price: ' + dc.purchase_price;
+      if (dc.rent_income) msg += '\n- Rent/Income: ' + dc.rent_income;
+      if (dc.borrower_profile) msg += '\n- Borrower Profile: ' + dc.borrower_profile;
+      if (dc.lender_options) msg += '\n- Lender Options: ' + dc.lender_options;
+      if (dc.state_market) msg += '\n- State/Market: ' + dc.state_market;
+      if (dc.deal_blocker) msg += '\n- Deal Blocker: ' + dc.deal_blocker;
+    }
+    return msg;
+  }
+
+  // ── SAVE SESSION ──
+  function saveSession(workingOn, stuck, goal, dealContext, memo, agentResults) {
+    return sbFetch('rd_sessions', {
+      method: 'POST',
+      body: {
+        working_on: workingOn,
+        stuck: stuck,
+        goal: goal,
+        deal_context: dealContext,
+        memo: memo
+      }
+    }).then(function(res) {
+      return res.json();
+    }).then(function(sessions) {
+      if (!sessions || !sessions.length) {
+        console.error('Session insert failed', sessions);
+        return;
+      }
+      var sessionId = sessions[0].id;
+      currentSessionId = sessionId;
+
+      // Insert agent responses
+      var responseRows = agentResults.map(function(r) {
+        return {
+          session_id: sessionId,
+          agent_id: r.id,
+          agent_name: r.name,
+          response: r.response
+        };
+      });
+      var responsesPromise = sbFetch('rd_responses', {
+        method: 'POST',
+        body: responseRows
+      });
+
+      // Insert ideas
+      var ideasPromise = Promise.resolve();
+      if (memo.ideas && memo.ideas.length) {
+        var ideaRows = memo.ideas.map(function(idea) {
+          return {
+            session_id: sessionId,
+            text: idea.text,
+            tags: idea.tags || [],
+            revenue_score: idea.revenue || 0,
+            speed_score: idea.speed || 0,
+            effort_score: idea.effort || 0
+          };
+        });
+        ideasPromise = sbFetch('rd_ideas', {
+          method: 'POST',
+          body: ideaRows
+        });
+      }
+
+      return Promise.all([responsesPromise, ideasPromise]);
+    }).catch(function(e) {
+      console.error('Save error:', e);
+    });
+  }
+
+  // ── RUN SESSION ──
+  function runSession() {
+    var key = localStorage.getItem('anthropic_api_key');
+    if (!key) { showKeyModal(); return; }
+
+    var workingOn = $('workingOn').value.trim();
+    var stuck = $('stuck').value.trim();
+    var goal = $('goal').value.trim();
+    if (!workingOn && !goal) {
+      alert('Enter at least Working On or Goal to run a session.');
+      return;
+    }
+
+    var runBtn = $('runBtn');
+    runBtn.disabled = true;
+    runBtn.textContent = 'Running...';
+
+    var sessionDot = $('sessionDot');
+    var sessionStatus = $('sessionStatus');
+    sessionDot.className = 'status-dot yellow';
+    sessionStatus.textContent = 'Agents thinking...';
+
+    var userMsg = buildUserMessage();
+    agentResponses = {};
+
+    // Reset cards
+    AGENTS.forEach(function(a) {
+      $('card-' + a.id).className = 'agent-card';
+      $('body-' + a.id).textContent = 'Waiting...';
+    });
+
+    // Show typing on all cards
+    AGENTS.forEach(function(a) { showTyping(a.id); });
+
+    // Run all 5 agents in parallel
+    var agentPromises = AGENTS.map(function(agent) {
+      return callAgent(agent.system, userMsg).then(function(response) {
+        agentResponses[agent.id] = response;
+        showResponse(agent.id, response);
+        return { id: agent.id, name: agent.name, response: response };
+      }).catch(function(e) {
+        var errMsg = e.message || String(e);
+        showError(agent.id, errMsg);
+        agentResponses[agent.id] = 'Error: ' + errMsg;
+        return { id: agent.id, name: agent.name, response: 'Error: ' + errMsg };
+      });
+    });
+
+    Promise.all(agentPromises).then(function(results) {
+      // Synthesis call
+      sessionStatus.textContent = 'Synthesizing...';
+
+      var synthesisMsg = 'ORIGINAL INPUTS:\n' + userMsg + '\n\n';
+      synthesisMsg += 'AGENT RESPONSES:\n\n';
+      results.forEach(function(r) {
+        synthesisMsg += '--- ' + r.name.toUpperCase() + ' ---\n' + r.response + '\n\n';
+      });
+
+      return callAgent(SYNTHESIS_SYSTEM, synthesisMsg).then(function(raw) {
+        var memo;
+        try {
+          memo = JSON.parse(raw);
+        } catch (parseErr) {
+          var jsonMatch = raw.match(/\{[\s\S]*\}/);
+          if (jsonMatch) {
+            memo = JSON.parse(jsonMatch[0]);
+          } else {
+            throw parseErr;
+          }
+        }
+        currentMemo = memo;
+
+        // Save to Supabase
+        sessionStatus.textContent = 'Saving to DB...';
+        return saveSession(workingOn, stuck, goal, getDealContext(), memo, results).then(function() {
+          sessionDot.className = 'status-dot green';
+          sessionStatus.textContent = 'Session complete';
+          renderMemo(memo);
+          switchTab('memo');
+        });
+      });
+    }).catch(function(e) {
+      sessionDot.className = 'status-dot red';
+      sessionStatus.textContent = 'Error: ' + (e.message || String(e));
+      console.error('Session error:', e);
+    }).finally(function() {
+      runBtn.disabled = false;
+      runBtn.textContent = 'Run Board Session';
+    });
+  }
+
+  // ── RENDER MEMO ──
+  function renderMemo(memo) {
+    var c = $('memoContainer');
+    if (!memo) {
+      c.innerHTML = '<div class="memo-empty">No memo yet. Run a board session first.</div>';
+      return;
+    }
+
+    var html = '';
+
+    // Opportunities
+    if (memo.opportunities && memo.opportunities.length) {
+      html += '<div class="memo-card"><div class="memo-card-title">Top Opportunities</div>';
+      memo.opportunities.forEach(function(opp) {
+        html += '<div class="opp-item"><div class="opp-text">' + esc(opp.text) + '</div><div class="opp-scores">';
+        html += '<span class="score-pill score-revenue">Revenue ' + (opp.revenue || 0) + '</span>';
+        html += '<span class="score-pill score-speed">Speed ' + (opp.speed || 0) + '</span>';
+        html += '<span class="score-pill score-effort">Effort ' + (opp.effort || 0) + '</span>';
+        html += '</div></div>';
+      });
+      html += '</div>';
+    }
+
+    // Fastest Move
+    if (memo.fastestMove) {
+      html += '<div class="memo-card memo-highlight"><div class="memo-card-title">&#9889; Fastest Money Move</div>';
+      html += '<div class="memo-text">' + esc(memo.fastestMove) + '</div></div>';
+    }
+
+    // Deal Insight (only if not null)
+    if (memo.dealInsight) {
+      html += '<div class="memo-card memo-blue"><div class="memo-card-title">&#128200; Deal-Level Insight</div>';
+      html += '<div class="memo-text">' + esc(memo.dealInsight) + '</div></div>';
+    }
+
+    // Risk
+    if (memo.risk) {
+      html += '<div class="memo-card memo-orange"><div class="memo-card-title">&#9888;&#65039; Biggest Risk</div>';
+      html += '<div class="memo-text">' + esc(memo.risk) + '</div></div>';
+    }
+
+    // Build Next
+    if (memo.buildNext) {
+      html += '<div class="memo-card"><div class="memo-card-title">&#128295; Build Next</div>';
+      html += '<div class="memo-text">' + esc(memo.buildNext) + '</div></div>';
+    }
+
+    // Next 24h
+    if (memo.next24h && memo.next24h.length) {
+      html += '<div class="memo-card"><div class="memo-card-title">&#128337; Next 24 Hours</div>';
+      html += '<ol class="next24-list">';
+      memo.next24h.forEach(function(item, i) {
+        html += '<li><span class="step-num">' + (i + 1) + '</span><span>' + esc(item) + '</span></li>';
+      });
+      html += '</ol></div>';
+    }
+
+    c.innerHTML = html || '<div class="memo-empty">Memo data is empty.</div>';
+  }
+
+  // ── VAULT ──
+  function loadVault() {
+    var c = $('vaultContainer');
+    c.innerHTML = '<div class="vault-empty">Loading ideas...</div>';
+    sbFetch('rd_ideas?select=*&order=created_at.desc&limit=100')
+      .then(function(res) { return res.json(); })
+      .then(function(ideas) {
+        if (!ideas || !ideas.length || ideas.message) {
+          c.innerHTML = '<div class="vault-empty">No ideas saved yet.</div>';
+          return;
+        }
+        var html = '<div class="vault-grid">';
+        ideas.forEach(function(idea) {
+          html += '<div class="vault-card">';
+          html += '<div class="vault-text">' + esc(idea.text) + '</div>';
+          if (idea.tags && idea.tags.length) {
+            html += '<div class="vault-tags">';
+            idea.tags.forEach(function(t) {
+              html += '<span class="vault-tag">' + esc(t) + '</span>';
+            });
+            html += '</div>';
+          }
+          html += '<div class="vault-scores">';
+          html += '<span class="score-pill score-revenue">Revenue ' + (idea.revenue_score || 0) + '</span>';
+          html += '<span class="score-pill score-speed">Speed ' + (idea.speed_score || 0) + '</span>';
+          html += '<span class="score-pill score-effort">Effort ' + (idea.effort_score || 0) + '</span>';
+          html += '</div>';
+          if (idea.created_at) {
+            html += '<div class="vault-date">' + new Date(idea.created_at).toLocaleString() + '</div>';
+          }
+          html += '</div>';
+        });
+        html += '</div>';
+        c.innerHTML = html;
+      })
+      .catch(function(e) {
+        c.innerHTML = '<div class="vault-empty">Error loading ideas: ' + esc(e.message) + '</div>';
+      });
+  }
+
+  // ── HISTORY ──
+  function loadHistory() {
+    var c = $('historyContainer');
+    c.innerHTML = '<div class="history-empty">Loading sessions...</div>';
+    sbFetch('rd_sessions?select=*&order=created_at.desc&limit=50')
+      .then(function(res) { return res.json(); })
+      .then(function(sessions) {
+        if (!sessions || !sessions.length || sessions.message) {
+          c.innerHTML = '<div class="history-empty">No sessions yet.</div>';
+          return;
+        }
+        var html = '';
+        sessions.forEach(function(s) {
+          var date = new Date(s.created_at).toLocaleString();
+          html += '<div class="history-item" data-sid="' + esc(s.id) + '">';
+          html += '<div class="history-meta">';
+          html += '<span class="history-goal">' + esc(s.goal || 'No goal set') + '</span>';
+          html += '<span class="history-date">' + esc(date) + '</span>';
+          html += '</div>';
+          html += '<div class="history-working">' + esc((s.working_on || '').substring(0, 150)) + '</div>';
+          html += '</div>';
+        });
+        c.innerHTML = html;
+
+        // Click handlers
+        c.querySelectorAll('.history-item').forEach(function(el) {
+          el.addEventListener('click', function() {
+            var sid = el.getAttribute('data-sid');
+            sbFetch('rd_sessions?select=*&id=eq.' + sid)
+              .then(function(res) { return res.json(); })
+              .then(function(rows) {
+                if (rows && rows.length && rows[0].memo) {
+                  currentMemo = rows[0].memo;
+                  renderMemo(rows[0].memo);
+                  switchTab('memo');
+                }
+              })
+              .catch(function(e) {
+                console.error('Load session error:', e);
+              });
+          });
+        });
+      })
+      .catch(function(e) {
+        c.innerHTML = '<div class="history-empty">Error: ' + esc(e.message) + '</div>';
+      });
+  }
+
+  // ── TAB SWITCHING ──
+  function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.tab === tab);
+    });
+    document.querySelectorAll('.tab-content').forEach(function(t) {
+      t.classList.toggle('active', t.id === 'tab-' + tab);
+    });
+    if (tab === 'vault') loadVault();
+    if (tab === 'history') loadHistory();
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      switchTab(btn.dataset.tab);
+    });
+  });
+
+  // ── API KEY MODAL ──
+  function showKeyModal() {
+    $('keyModal').style.display = 'flex';
+    var existing = localStorage.getItem('anthropic_api_key') || '';
+    $('keyInput').value = existing;
+    setTimeout(function() { $('keyInput').focus(); }, 100);
+  }
+
+  function hideKeyModal() {
+    $('keyModal').style.display = 'none';
+  }
+
+  $('keyBtn').addEventListener('click', showKeyModal);
+
+  $('keySaveBtn').addEventListener('click', function() {
+    var key = $('keyInput').value.trim();
+    if (key) {
+      localStorage.setItem('anthropic_api_key', key);
+      hideKeyModal();
+    }
+  });
+
+  $('keyCancelBtn').addEventListener('click', hideKeyModal);
+
+  $('keyModal').addEventListener('click', function(e) {
+    if (e.target === e.currentTarget) hideKeyModal();
+  });
+
+  // Enter key to save
+  $('keyInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      var key = $('keyInput').value.trim();
+      if (key) {
+        localStorage.setItem('anthropic_api_key', key);
+        hideKeyModal();
+      }
+    }
+  });
+
+  // ── RUN BUTTON ──
+  $('runBtn').addEventListener('click', runSession);
+
+  // ── INIT ──
+  checkDb();
+  if (!localStorage.getItem('anthropic_api_key')) {
+    setTimeout(showKeyModal, 500);
+  }
+
+})();
+</script>
+</body>
+</html>

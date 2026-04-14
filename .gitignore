@@ -1,0 +1,26 @@
+# Logs
+*.log
+healthcheck.log
+morning-briefing.log
+night-operator.log
+
+# Secrets
+*.env
+.env*
+telegram-bridge-config.json
+*config.json
+
+# Backups and duplicates
+*.bak
+*.bak2
+*.bak3
+*.broken
+*.OLD_DUPLICATE
+
+# Output files (generated, not source)
+/lex-output/
+/memory/
+
+# Python cache
+__pycache__/
+*.pyc
