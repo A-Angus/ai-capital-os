@@ -89,15 +89,46 @@ def scan_pipeline_files() -> list[dict]:
 
 
 def scan_inbox() -> tuple[str | None, str]:
-    """Check inbox for deal-related signals."""
+    """Check inbox for deal-related signals across all active deals and key contacts."""
     query = (
-        "(from:wolfer OR from:bohnker OR from:kennedy OR from:sognare OR from:tanya "
-        "OR from:nikita OR from:unitas OR from:jz OR from:zendejas OR from:levinecapital "
-        "OR from:cogocapital OR subject:Coalson OR subject:ACJ OR subject:Nikita "
-        "OR subject:Youngs OR subject:Nashville) newer_than:2d"
+        "(from:wolfer OR from:bohnker OR from:kennedyfunding OR from:sognare "
+        "OR from:tanya OR from:waymire OR from:nikita OR from:baker "
+        "OR from:unitas OR from:jz OR from:zendejas OR from:levinecapital "
+        "OR from:cogocapital OR from:bryanjmarriott OR from:bryan.marriott "
+        "OR from:dream.solutions OR from:dreamsolutions "
+        "OR subject:Coalson OR subject:\"ACJ Built\" OR subject:\"Nic Bray\" "
+        "OR subject:\"Nikita Baker\" OR subject:\"Youngs Lane\" "
+        "OR subject:Nashville OR subject:Cheltenham OR subject:\"Kennedy Funding\" "
+        "OR subject:\"Dream Solutions\") newer_than:3d"
     )
     output = run_gmail_search(query)
     lower = output.lower()
+
+    # Nashville is critical — deadline April 20
+    if "youngs" in lower or "nashville" in lower or "tanya" in lower or "waymire" in lower or "sognare" in lower:
+        return "NASHVILLE_URGENT", output
+
+    # Bryan Marriott / Dream Solutions deals
+    if "bryanjmarriott" in lower or "bryan.marriott" in lower or "dream solutions" in lower or "dreamsolutions" in lower:
+        return "BRYAN_DREAM_SOLUTIONS", output
+
+    # Coalson Kennedy Funding
+    if "coalson" in lower or "kennedy" in lower or "wolfer" in lower or "bohnker" in lower:
+        return "COALSON", output
+
+    # ACJ Built
+    if "acj" in lower or "nic bray" in lower or "zendejas" in lower or "jz" in lower:
+        return "ACJ", output
+
+    # Nikita Baker gap funding
+    if "nikita" in lower or "baker" in lower or "unitas" in lower:
+        return "NIKITA", output
+
+    # Cheltenham / Kwami
+    if "cheltenham" in lower or "kwami" in lower:
+        return "CHELTENHAM", output
+
+    return None, output
 
     if "youngs" in lower or "nashville" in lower or "tanya" in lower or "sognare" in lower:
         return "NASHVILLE_URGENT", output
@@ -115,6 +146,16 @@ def scan_inbox() -> tuple[str | None, str]:
 def build_action_list(deals: list[dict], stale_pipeline: list[dict], inbox_signal: str | None) -> list[dict]:
     """Build prioritized action list from all signals."""
     actions = []
+
+    # Bryan / Dream Solutions — route separately
+    if inbox_signal == "BRYAN_DREAM_SOLUTIONS":
+        actions.append({
+            "priority": 1,
+            "deal": "Dream Solutions Group — Bryan Marriott",
+            "action": "New activity from Bryan Marriott. Review and respond. Tag as Dream Solutions deal if applicable.",
+            "type": "partner_follow_up",
+            "urgency": "HIGH — partner contact"
+        })
 
     # Critical deadline first
     if inbox_signal == "NASHVILLE_URGENT" or any(d.get("name") == "Nashville Transactional" for d in deals):

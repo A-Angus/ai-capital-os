@@ -1,8 +1,8 @@
 # People — Contact CRM
 
-**Purpose:** AI-readable contact database. When you mention someone by name, the AI looks them up here for context on their role, active deals, and relationship dynamics.
+**Purpose:** AI readable contact database. When you mention someone by name, the AI looks them up here for context on their role, active deals, and relationship dynamics.
 
-**Last Updated:** March 2026
+**Last Updated:** 2026-04-14
 
 ---
 
@@ -10,90 +10,92 @@
 
 | Name | File | Role / Relationship | Priority |
 |------|------|---------------------|----------|
-| Bryan Marriott | bryan-marriott.md | Close collaborator in deal flow | 🔴 |
+| Bryan Marriott | bryan-marriott.md | Co Owner, Dream Solutions Group / Deal Source | 🔴 |
+| Brandon Henry | brandon-henry.md | Capital Partner, Legends Acquisitions | 🔴 |
 | Brian Swinton | brian-swinton.md | Deal source and confidant | 🔴 |
+| Craig Fournier | craig-fournier.md | Borrower — Orange Park 4plex DSCR | 🔴 |
+| Kwami Fox | kwami-fox.md | Borrower — Cheltenham Ct (dead) | 🟢 |
 | Mo Castro | mo-castro.md | Funding partner at The Sault Group | 🟡 |
-| Benny Anand | benny-anand.md | Lender contact at Rehab Financial Group | 🟡 |
-| Sheun Ogunbeku | sheun-ogunbeku.md | Borrower — Houston flip (dead) | 🟢 |
-| Kwami Fox | kwami-fox.md | Borrower — Cheltenham Ct project | 🔴 |
-| Gheorghe Cucu | gheorghe-cucu.md | Borrower — Auto shop acquisition | 🟡 |
+| Benny Anand | benny-anand.md | Lender — Rehab Financial Group | 🟡 |
+| Gheorghe Cucu | gheorghe-cucu.md | Borrower — Auto shop acquisition (stalled) | 🟡 |
 | Eric Fuller | eric-fuller.md | Capital partner — Creative Cash Partners | 🟡 |
 | Mikey | mikey-transactional.md | Transactional lender | 🟡 |
+| Sheun Ogunbeku | sheun-ogunbeku.md | Borrower — Houston flip (dead) | 🟢 |
 
 **Priority Key:**
 🔴 High (weekly+) · 🟡 Medium (monthly) · 🟢 Low (as needed)
+
+**Not yet profiled (mentioned in active deals):**
+- Farshid Hakimyar — CEO, Colosseum Sports Resorts ($350M deal)
+- Charles Whittaker — Alluinn Development ($67M Marriott hotel)
+- Racquel Collier — Caliber Real Estate (MF development)
+- Ali Balapour — Niba Capital (506c fund, new capital relationship)
+- Christopher Cardenas — RCN Capital (new rep, replaced Michael Mina)
+- Cameron Orozco — Sync Brokerage (Chatsworth ground up SFR)
+- Tiara Williams — Borrower, 1793 Parkhill Drive (closing Apr 17)
 
 ---
 
 ## Relationship Map — Capital Ecosystem
 
-### Core Hub
+### Dual Entity Structure
 
-**Alex Angus — Liberty Equity Xchange**
-Capital advisor and structurer. Matches borrowers with lenders and capital partners while structuring deals and earning placement fees.
+```
+LIBERTY EQUITY XCHANGE LLC                    DREAM SOLUTIONS GROUP LLC
+(Alex Angus, sole)                            (Alex Angus + Bryan Marriott)
 
----
+Direct borrowers                              Bryan sourced deals
+Bridge, DSCR, fix and flip                    Large commercial capital raises
+Residential investment                        Hotels, resorts, development
+Fee: broker/placement                         Fee: advisory retainer + success
+```
 
 ### Ecosystem Flow
 
 ```
 Deal Sources → bring opportunities
-Borrowers   → submit deals
-Alex / LEX  → analyze and structure capital stack
-Lenders / Capital Partners → provide financing
-Deal closes → LEX earns placement fee, equity participation, or marketplace transaction fee
+Borrowers / Developers → submit deals
+Alex routes to correct entity:
+  - Direct/residential → Liberty Equity Xchange
+  - Bryan sourced/commercial → Dream Solutions Group
+Capital Partners / Lenders → provide financing
+Deal closes → entity earns fee
 ```
 
 ---
 
 ### Deal Sources
-People who bring deals into the ecosystem.
-
-- **Brian Swinton** — Confidant and deal source
-- **Bryan Marriott** — Collaborator with access to investor networks
-- *Future:* Wholesalers, agents, investor communities
-
-### Borrowers
-People seeking funding who submit deals needing capital solutions.
-
-- Sheun Ogunbeku
-- Kwami Fox
-- Gheorghe Cucu
-
-### Lenders
-Institutions or individuals who provide loans.
-
-- **Benny Anand** — Rehab Financial Group (fix and flip, bridge)
-- *Future:* DSCR lenders, fix and flip lenders, bridge lenders
+- **Bryan Marriott** — Dream Solutions Group deals. 5 active deals ($475M+ combined). Very active April 2026.
+- **Brian Swinton** — Confidant and deal source. Routes through Liberty Equity Xchange.
+- **JZ Zendejas** — Crown6 Investments. Sourced ACJ Built and NBC business expansion.
+- **Eric Fuller** — Creative Cash Partners. 100% financing program. Parkhill Drive closing Apr 17.
+- **Cameron Orozco** — Sync Brokerage. New, CA ground up SFR.
 
 ### Capital Partners
-Provide private capital or alternative structures.
-
-- **Eric Fuller** — Creative Cash Partners (100% financing structures)
+- **Brandon Henry / Legends Acquisitions** — Co advisory on Dream Solutions Group deals (50/50 split)
+- **Ali Balapour / Niba Capital** — 506(c) fund, 3 to 5% cost of capital, referral fees
+- **Eric Fuller / Creative Cash Partners** — 100% financing (NC/WV/OH/GA)
 - **Mikey** — Transactional lending
 
----
+### Active Borrowers
+- Craig Fournier — Orange Park 4plex DSCR
+- Gheorghe Cucu — Auto shop (stalled)
+- Jason Coalson — TX land bridge (stalled)
+- Nic Bray — Construction bridge (stalled)
+- Tiara Williams — Parkhill Drive (closing)
 
-## Strategic Direction
-
-The goal is to evolve this ecosystem into a capital marketplace platform.
-
-**Future system flow:**
-Borrower submits deal → platform analyzes → lender matched → Alex oversees complex deals
-
----
-
-## Most Important Missing Category
-
-Based on current strategy, the highest-priority gap is:
-
-**Operators who send deals regularly** — wholesalers, investor community members, brokers, developers.
-
-Even 5 consistent operators can generate the deal flow needed to reach monthly revenue targets.
+### Lenders
+- **Benny Anand** — Rehab Financial Group
+- **Christopher Cardenas** — RCN Capital (new rep)
+- **Ryan Huddleston** — Visio Lending
+- **Chase Wolfer** — Kennedy Funding
+- **John Barretta** — The Accredited Group
 
 ---
 
 ## AI Notes
 
-- If Bryan Marriott and Brian Swinton are both involved in a conversation, maintain neutrality — there is friction between them.
-- Mo Castro is relevant to current deals but is not part of the long-term Liberty Equity Xchange platform vision.
+- If Bryan Marriott and Brian Swinton are both involved in a conversation, maintain neutrality — there is friction between them
+- Mo Castro is relevant to current deals but is not part of the long term platform vision
+- All Bryan deals route through Dream Solutions Group LLC
+- Brandon Henry is the key capital partner for Dream Solutions Group — protect this relationship

@@ -166,7 +166,8 @@ Session end: log key decisions and updates to brain/daily-log/YYYY-MM-DD.md
 - Brain: /home/lexbot/brain/
 - Repo: /home/lexbot/ai-capital-os/
 - Supabase backend
-- GHL CRM location ID: ZS5wuDbXMdtD5ua94ZPo
+- GHL CRM location ID (LEX): ZS5wuDbXMdtD5ua94ZPo
+- GHL CRM location ID (DSG): D8Y2lQPZY1OK6XYXCIG3 — app.guaranteedcrm.io
 - n8n self-hosted
 - Caddy HTTPS, GoDaddy DNS
 - Personal email: mr.alexangus@gmail.com
