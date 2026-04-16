@@ -2,7 +2,7 @@
 
 **Purpose:** Master directory of institutional lenders, private capital partners, and specialty funding sources available to Liberty Equity Xchange.
 
-**Last Updated:** 2026-03-24
+**Last Updated:** 2026-04-15
 
 ---
 
@@ -154,8 +154,10 @@ These partners provide non-institutional capital that fills funding gaps in the 
 | Name | Capital Type | Notes |
 |------|--------------|-------|
 | Carrol Walton Grizzle | Gap capital | Private lender from SubTo ecosystem |
-| Eric Fuller | 100% financing | Creative Cash Partners — 10% in 90 days or 15% in 180 days. Markets: NC, WV, OH, GA |
+| Eric Fuller | 100% financing | Creative Cash Partners — 10% in 90 days or 15% in 180 days. Markets: NC, WV, OH, GA. First funded deal (Parkhill Drive) closing Apr 17, 2026. |
 | Mikey | Transactional lending | Short-term bridge funding for deal closings |
+| Ali Balapour / Niba Capital | 506(c) fund, debt + equity | Registered fund. Short term development deals (12 to 24 month lock). Cost of capital 3 to 5%. Offers referral fee for capital raisers. Connected through Alex and Bryan. |
+| Brandon Henry / Legends Acquisitions | Capital partner (co advisory) | 50/50 advisory fee split with Dream Solutions Group LLC via Composed Capital 2 LLC. Key partner on Graduate Champaign Hotel and Colosseum Sports Resort. |
 
 ---
 
@@ -188,13 +190,26 @@ These lenders provide capital above the senior loan or supply structured financi
 
 ### Rehab Financial Group — Benny Anand
 - Active contact for fix and flip submissions
-- Currently reviewing: Sheun Ogunbeku — Houston flip (9318 Sherbourne St, ~$231k loan, ARV $330k–$350k)
+- Does NOT broker DSCR with outside brokers. Declined Craig Fournier DSCR deal on that basis.
 - Do not route other borrowers to Benny directly — all submissions go through Liberty Equity Xchange
+
+### RCN Capital — Christopher Cardenas
+- New rep (replaced Michael Mina as of April 2026)
+- Quoted Craig Fournier Orange Park 4plex: 80% LTV, 30yr fixed, 5yr tiered prepay, rates 6.675% to 7.675%
+- Only lender fee at par: $1,995 closing fee. Option for 0.75% yield spread on back end.
+- Strong leverage play for borrowers minimizing cash to close
 
 ### Eric Fuller — Creative Cash Partners
 - Program: 100% financing structures
 - Returns: 10% in 90 days or 15% in 180 days
 - Active markets: NC, WV, OH, GA only — verify market before recommending
+- First funded deal: 1793 Parkhill Drive GA (Tiara Williams), closing Apr 17, 2026
+- Closing firm: Heritage Closing Firm (Holly Smith, Cheri pre closer)
+
+### Visio Lending — Ryan Huddleston
+- DSCR specialist. National.
+- Quoted Craig Fournier deal: PAR pricing, 28 to 33 day close. Lower DSCR rates promo sent 4/14.
+- No personal income verification. Broker hub available.
 
 ### Carrol Walton Grizzle
 - Source: SubTo ecosystem
@@ -203,6 +218,13 @@ These lenders provide capital above the senior loan or supply structured financi
 ### Mikey
 - Transactional lender only — not a long-term capital source
 - Best for back-to-back closings and deals that need fast bridge capital before permanent financing is in place
+
+### Niba Capital — Ali Balapour (CEO)
+- Registered 506(c) fund. Debt + equity offerings.
+- Short term development deals (12 to 24 month lock). Cost of capital 3 to 5%.
+- Offers referral fee for capital raisers.
+- Sent business plan, structure docs, and sample deal (131 Renshaw Rd) on Apr 3.
+- Connected through Alex and Bryan.
 
 ---
 

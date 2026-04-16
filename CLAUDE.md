@@ -190,6 +190,45 @@ Session end: log key decisions and updates to brain/daily-log/YYYY-MM-DD.md
 
 Full skill definitions in skills/ directory.
 
+## Task Coordination
+
+The coordination layer lives at brain/coordination/ and manages all work across sessions.
+
+### Files
+
+- **INBOX_QUEUE.md** — All new work enters here first. Unprocessed items from Gmail, deals, people, ops.
+- **ACTIVE_TASKS.md** — Work currently in progress. Categorized as URGENT (deadline within 7 days), ACTIVE (in progress), or STALLED (no movement >7 days).
+- **COMPLETED_ACTIONS.md** — Log of all completed work. One line per action with date and context.
+- **LAST_SYNC.md** — Snapshot of current state, what was done, and recommended next actions. Updated every session.
+
+### Rules
+
+1. All new work enters INBOX_QUEUE.md first. No exceptions.
+2. When work begins on a queued item, move it to ACTIVE_TASKS.md with a task ID (T###).
+3. When a task completes, remove it from ACTIVE_TASKS.md and log one line to COMPLETED_ACTIONS.md.
+4. LAST_SYNC.md is updated at the start and end of every session.
+5. Items in INBOX_QUEUE.md older than 48 hours without action get escalated.
+6. Tasks in ACTIVE_TASKS.md with no movement for 7+ days move to STALLED.
+7. Night operator (night_operator.py) scans ACTIVE_TASKS.md nightly and flags urgent/stalled items.
+8. Session start: load LAST_SYNC.md to understand current state before acting.
+9. Session end: update LAST_SYNC.md with what was done and next actions.
+
+### Session Workflow
+
+**Start:**
+1. Load CLAUDE.md, brain/README.md, brain/goals.md (standard)
+2. Load brain/coordination/LAST_SYNC.md (new)
+3. Check INBOX_QUEUE.md for unprocessed items
+
+**During:**
+- New items discovered → add to INBOX_QUEUE.md
+- Starting work → move from queue to ACTIVE_TASKS.md
+- Finishing work → remove from ACTIVE_TASKS.md, log to COMPLETED_ACTIONS.md
+
+**End:**
+- Update LAST_SYNC.md with session summary and next actions
+- Log key decisions to brain/daily/YYYY-MM-DD.md (existing rule)
+
 ## Output Standard
 
 Every task returns:

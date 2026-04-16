@@ -1,6 +1,6 @@
 # LEX Business Goals — OpenClaw Reference File
 # Owner: Alex Angus | Liberty Equity Xchange LLC
-# Last updated: March 2026
+# Last updated: April 2026
 
 ## PRIMARY GOAL
 Generate revenue as a commercial loan broker and capital advisor.
@@ -12,13 +12,34 @@ Target: $100,000/month across brokerage fees, referral fees, and capital advisor
 
 2. Referral fees: passed to or received from other brokers and capital partners on deals outside LEX direct lending relationships.
 
-3. Capital advisory retainers: paid by borrowers or developers for structured deal packaging, lender matching, and ongoing capital strategy on large commercial deals and non conventional assets.
+3. Capital advisory retainers: paid by borrowers or developers for structured deal packaging, lender matching, and ongoing capital strategy on large commercial deals and non conventional assets. Dream Solutions Group LLC handles large commercial raises with 50/50 advisory fee split with capital partners.
 
-## ACTIVE DEALS
+## ACTIVE DEALS (as of April 15, 2026)
 
-1. Texas land deal: Jason Coalson / Coalson Excavation LLC. Bridge loan via Kennedy Funding. Three parcels. Roughly 39% LTV. Submitted and awaiting term sheet.
+### Closing
+1. Parkhill Drive GA: Tiara Williams / Creative Cash Partners (Eric Fuller). 100% financing fix and flip. Closing Friday April 17. First funded deal through this program.
 
-2. Construction bridge: Nic Bray / ACJ Built LLC. Referral from JZ Zendejas. Packaging in progress.
+### Structuring
+2. Craig Fournier / Orange Park 4plex DSCR: RCN Capital (80% LTV) and Visio both quoted. Closest LEX direct deal to closing. Awaiting broker comp replies.
+3. Coalson Excavation / TX Land Bridge: $11M via Kennedy Funding. 39% LTV. Stalled 9+ days on borrower side.
+4. ACJ Built / Construction Bridge: Nic Bray / JZ Zendejas referral. Stalled 27 days. Funding app sent, no response.
+5. Alluinn Development / Trades District Hotel: $67M Marriott branded hotel, Bloomington IN. $20M equity gap. NDA and deck incoming from Charles Whittaker. Dream Solutions Group.
+
+### Under Review / Engagement Sent
+6. Graduate Champaign Hotel: $38M capital raise. PandaDoc sent to Toby and Brandon Henry. Dream Solutions Group.
+7. Colosseum Sports Resort: $350M ground up, Stafford VA. Farshid Hakimyar. Friday 4/18 call at 3:30pm EST. Dream Solutions Group.
+
+### Intake
+8. Caliber RE / Gibson Rd MF: Bryan sourced, Racquel Collier. Dream Solutions Group.
+9. Atlanta All Sports Dome: $10M development. Bryan, Mo Castro, Kevin Dattola. Dream Solutions Group.
+10. Cameron Orozco / Chatsworth SFR: Ground up, CA. Plans received March 27.
+
+### Stalled
+11. Gheorghe Cucu / Auto Shop: 30+ days no activity. Liberty Equity Xchange.
+
+### Dead
+12. Sheun Ogunbeku / Houston flip (dead 3/19)
+13. Kwami Fox / Cheltenham Ct (dead 4/13, contract voided)
 
 ## LEAD GENERATION PRIORITIES
 

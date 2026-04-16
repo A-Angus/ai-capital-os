@@ -2,7 +2,7 @@
 
 **Purpose:** AI readable contact database. When you mention someone by name, the AI looks them up here for context on their role, active deals, and relationship dynamics.
 
-**Last Updated:** 2026-04-14
+**Last Updated:** 2026-04-15
 
 ---
 
@@ -21,18 +21,18 @@
 | Eric Fuller | eric-fuller.md | Capital partner — Creative Cash Partners | 🟡 |
 | Mikey | mikey-transactional.md | Transactional lender | 🟡 |
 | Sheun Ogunbeku | sheun-ogunbeku.md | Borrower — Houston flip (dead) | 🟢 |
+| Farshid Hakimyar | farshid-hakimyar.md | Developer — Colosseum Sports Resort ($350M) | 🔴 |
+| Charles Whittaker | charles-whittaker.md | Developer — Alluinn / Trades District Hotel ($67M) | 🔴 |
+| Tiara Williams | tiara-williams.md | Borrower — Parkhill Drive (closing Apr 17) | 🔴 |
+| Christopher Cardenas | christopher-cardenas.md | Lender — RCN Capital | 🟡 |
+| Ali Balapour | ali-balapour.md | Capital Partner — Niba Capital (506c fund) | 🟡 |
 
 **Priority Key:**
 🔴 High (weekly+) · 🟡 Medium (monthly) · 🟢 Low (as needed)
 
 **Not yet profiled (mentioned in active deals):**
-- Farshid Hakimyar — CEO, Colosseum Sports Resorts ($350M deal)
-- Charles Whittaker — Alluinn Development ($67M Marriott hotel)
 - Racquel Collier — Caliber Real Estate (MF development)
-- Ali Balapour — Niba Capital (506c fund, new capital relationship)
-- Christopher Cardenas — RCN Capital (new rep, replaced Michael Mina)
 - Cameron Orozco — Sync Brokerage (Chatsworth ground up SFR)
-- Tiara Williams — Borrower, 1793 Parkhill Drive (closing Apr 17)
 
 ---
 
