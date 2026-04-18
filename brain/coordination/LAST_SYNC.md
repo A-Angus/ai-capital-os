@@ -2,21 +2,17 @@
 
 **Purpose:** Snapshot of current state and recommended next actions. Updated every session.
 
-**Last Sync:** 2026-04-15 (system upgrade session)
+**Last Sync:** 2026-04-17 (coordination audit + daily log)
 
 ---
 
 ## What Was Done This Session
 
-1. Verified coordination layer (INBOX_QUEUE, ACTIVE_TASKS, COMPLETED_ACTIONS, LAST_SYNC) — already populated, confirmed current
-2. Verified CLAUDE.md Task Coordination section — already in place
-3. Diagnosed n8n: dead since Mar 27, systemd service exists but inactive, fix plan ready (see below)
-4. Diagnosed atlas-bridge: stable, 5 restarts in 6h window, no crash pattern found in logs
-5. Updated brain/goals.md — refreshed from March 2026 to April 2026 with full 13 deal pipeline
-6. Updated brain/lenders/lenders.md — added Niba Capital, Christopher Cardenas (RCN), updated Eric Fuller, Visio, Rehab Financial notes
-7. Created 5 missing people profiles: Tiara Williams, Farshid Hakimyar, Charles Whittaker, Christopher Cardenas, Ali Balapour
-8. Updated brain/people/README.md index with new profiles
-9. Diagnosed email triage automation: script missing since deployment, cron jobs removed from crontab, needs rebuild
+1. Coordination layer audit: ACTIVE_TASKS and INBOX_QUEUE confirmed current (both updated 4/17)
+2. Created daily log for 2026-04-17
+3. Updated COMPLETED_ACTIONS with 4/17 entries
+4. Updated LAST_SYNC to reflect current state
+5. Two new Bryan deals logged to INBOX_QUEUE: Archbald PA Senior Health Facilities, LDG Development Louisville
 
 ---
 
@@ -36,35 +32,34 @@
 
 | Category | Count | Key Items |
 |----------|-------|-----------|
-| 🔴 Urgent | 4 | Parkhill closing (Apr 17), Colosseum call prep (Apr 18), Craig Fournier broker comp, Graduate PandaDoc |
-| 🟡 Active | 4 | Alluinn Development, Caliber RE, Atlanta Dome, Token rotation |
-| ⚪ Stalled | 3 | Coalson (9d), ACJ Built (27d), Gheorghe Cucu (30d+) |
-| 💰 Closing | 1 | Parkhill Drive (Friday Apr 17) |
+| 🔴 Urgent | 3 | Parkhill closing (TODAY), Colosseum call (TODAY 12:30pm PT), Craig Fournier broker comp |
+| 🟡 Active | 6 | Alluinn Development, Caliber RE, Atlanta Dome, Graduate PandaDoc, Archbald PA (new), LDG Development (new) |
+| ⚪ Stalled | 3 | Coalson (11d), ACJ Built (30d), Gheorghe Cucu (33d+) |
+| 💰 Closing | 1 | Parkhill Drive (TODAY) |
+| 🔒 Security | 1 | Token rotation (GitGuardian, 2 days open) |
 
 ---
 
 ## Recommended Next Actions (Priority Order)
 
-1. **Confirm Parkhill Drive closing time** for Friday Apr 17. First funded deal. Cannot slip.
-2. **Reply to RCN and Visio** with broker comp on Craig Fournier. Closest LEX deal to closing after Parkhill.
-3. **Review Colosseum executive summary** before Friday 3:30pm call. $350M deal, biggest in pipeline.
-4. **Start n8n** — `sudo systemctl start n8n` (low risk, service file exists and is enabled)
-5. **Rebuild email triage automation** — script needs to be written and deployed, crons re added
-6. **Rotate exposed API tokens** — Telegram + HighLevel (GitGuardian alert still open)
-7. **Follow up with Andrew Bohnker** on Coalson. 9 days stalled, flag as at risk if no response by Apr 18.
+1. **Monitor Parkhill Drive closing** — signing 2pm ET today. Track fee payment post close. First funded deal.
+2. **Colosseum call at 12:30pm PT** — $350M ground up. Bryan, Brandon, Farshid, Chris.
+3. **Reply to RCN and Visio** with broker comp on Craig Fournier. Closest LEX deal to closing after Parkhill.
+4. **Rotate exposed API tokens** — Telegram + HighLevel (GitGuardian alert, 2 days open)
+5. **Follow up with Andrew Bohnker** on Coalson. 11 days stalled. Tomorrow is the Apr 18 flag date.
+6. **Start n8n** — `sudo systemctl start n8n` (dead since Mar 27)
+7. **Rebuild email triage automation** — script missing, crons removed
 
 ---
 
 ## Items Requiring Alex's Decision
 
 - Broker comp structure for Craig Fournier (RCN and Visio)
-- Fee structure for Parkhill Drive through Creative Cash Partners
 - Role and fee structure for Atlanta All Sports Dome
 - Whether to restart n8n now or wait for workflow review
-- Scope and approach for email triage rebuild
 
 ---
 
 ## Next Sync Target
 
-End of next session or after Parkhill Drive closes.
+End of today's session or after Parkhill Drive closes and Colosseum call wraps.

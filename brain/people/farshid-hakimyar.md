@@ -35,7 +35,7 @@ CEO of Colosseum Sports Resorts. Developing a $350M ground up sports resort in S
 
 ## Active Deals / Opportunities
 
-- Colosseum Sports Resort, Stafford VA — $350M ground up construction. Executive summary sent April 14. Call scheduled Friday April 18 at 3:30pm EST with Bryan Marriott, Brandon Henry, and Farshid.
+- Colosseum Sports Resort, Stafford VA — $350M ground up construction. Executive summary sent April 14. Call scheduled Friday April 17 at 3:30pm EST (12:30pm PT) with Bryan Marriott, Brandon Henry, and Farshid.
 
 ---
 

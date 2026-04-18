@@ -171,7 +171,7 @@ First major capital advisory engagement through Dream Solutions Group. 50/50 fee
 
 **Next Steps**
 - [ ] Review executive summary from Farshid
-- [ ] Prepare for Friday 4/18 call at 3:30pm EST (Bryan, Brandon, Farshid)
+- [ ] Prepare for Friday 4/17 call at 3:30pm EST / 12:30pm PT (Bryan, Brandon, Farshid, Chris from Solve for X)
 - [ ] Begin preliminary capital structure analysis
 - [ ] Identify potential capital sources for $350M ground up
 

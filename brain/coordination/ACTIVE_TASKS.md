@@ -2,30 +2,30 @@
 
 **Purpose:** Everything currently being worked. Organized by urgency. Items move here from INBOX_QUEUE.md and get removed when complete (logged to COMPLETED_ACTIONS.md).
 
-**Last Updated:** 2026-04-15
+**Last Updated:** 2026-04-17
 
 ---
 
 ## 🔴 URGENT (Deadline within 7 days)
 
-### T001 — Parkhill Drive Closing (Apr 17)
+### T001 — Parkhill Drive Closing (TODAY Apr 17) 💰
 - **Deal:** 1793 Parkhill Drive GA / Tiara Williams
 - **Entity:** Liberty Equity Xchange
-- **Lender:** Creative Cash Partners (Eric Fuller / Nitin Daswani)
-- **Closing firm:** Heritage Closing Firm (Holly Smith)
-- **Status:** Closing time being scheduled for Friday Apr 17
-- **Blockers:** Need closing time confirmation, lender info and terms from Nitin
-- **Next:** Confirm closing time, verify fee payment structure
-- **Added:** 2026-04-15
+- **Lender:** Creative Cash Partners (Eric Fuller / Nitin Daswani / Abraham Gray)
+- **Closing firm:** Heritage Closing Firm (Cheri Dukett closer, Holly Smith pre closer)
+- **Status:** CLOSING TODAY. Signing at 2pm ET at Sugarloaf. HUD approved. Fee: $4,600 Capital Placement Fee to Liberty Equity Xchange LLC. Lender wires: VIAMA and RRR 401K plan received. Nitin confirming remaining wires.
+- **Blockers:** None for closing. Gap funding with Johny Omaga (Vision Alchemy) is separate and still pending.
+- **Next:** Monitor closing confirmation. Track fee payment.
+- **Added:** 2026-04-15 | **Updated:** 2026-04-17
 
-### T002 — Colosseum Sports Resort Call Prep (Apr 18)
+### T002 — Colosseum Sports Resort Call (TODAY Apr 17 at 12:30pm PT)
 - **Deal:** $350M ground up, Stafford VA / Farshid Hakimyar
 - **Entity:** Dream Solutions Group
-- **Call:** Friday 4/18 at 3:30pm EST with Bryan, Brandon, Farshid
-- **Status:** Executive summary received from Farshid, needs review
+- **Call:** TODAY 3:30pm EST / 12:30pm PT via Zoom. Bryan, Brandon, Farshid, Chris (Solve for X).
+- **Status:** Executive summary from Farshid is in Bryan's forwarded email (Apr 14). Zoom link sent by Bryan.
 - **Blockers:** None
-- **Next:** Review executive summary, prepare capital structure questions, identify preliminary sources
-- **Added:** 2026-04-15
+- **Next:** Join call, discuss capital structure, determine equity vs debt split
+- **Added:** 2026-04-15 | **Updated:** 2026-04-17
 
 ### T003 — Craig Fournier DSCR: Broker Comp Replies
 - **Deal:** Orange Park 4plex / Craig Fournier

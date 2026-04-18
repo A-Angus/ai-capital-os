@@ -18,6 +18,13 @@
 - Created 5 people profiles: Tiara Williams, Farshid Hakimyar, Charles Whittaker, Christopher Cardenas, Ali Balapour
 - Updated brain/people/README.md index
 
+### 2026-04-17
+- Parkhill Drive closing TODAY: HUD approved, signing 2pm ET, $4,600 fee confirmed
+- Colosseum Sports Resort call at 3:30pm EST with Bryan, Brandon, Farshid
+- Two new Bryan deals added to INBOX_QUEUE: Archbald PA Senior Health, LDG Development Louisville
+- Johny Omaga gap funding: Alex sent Cary Drive info for cross collateral discussion
+- Coordination layer audit: brought LAST_SYNC, COMPLETED_ACTIONS, and daily logs current
+
 ### 2026-04-14
 - Capital Strategy Consulting Agreement sent to Toby and Brandon via PandaDoc (Graduate Champaign Hotel)
 - Craig Fournier deal: RCN Capital pricing received and logged (80% LTV, 6.675% to 7.675%)
