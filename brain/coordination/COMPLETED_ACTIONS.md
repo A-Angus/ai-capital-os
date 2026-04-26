@@ -2,11 +2,22 @@
 
 **Purpose:** Record of all completed work across sessions. Provides audit trail and prevents duplicate effort.
 
-**Last Updated:** 2026-04-15
+**Last Updated:** 2026-04-25
 
 ---
 
 ## April 2026
+
+### 2026-04-25
+- Inbox-wave 16:46 UTC: scanned 500+ unread, surfaced signal items, cleared queue item 6 (Graduate Champaign PandaDoc — both signed 4/13–4/14)
+- Added queue items 14 (West Campus Towers Austin call Mon 12:30 CST), 15 (Bryan VIP $1.2M portfolio fwd), 16 (Gilman's Pointe — Bryan replied to Nick)
+- Inbox-wave 22:46 UTC (3-hour delta): triaged 50 unread, 7 substantive
+- Resolved queue #3 — confirmed Alex sent Johny Omaga the Parkhill "deal died" note + criteria request at 13:39 PT (thread 19d9c1cf3153a4c5)
+- Confirmed Alex sent 3 nudges to JZ Zendejas Fri 4/24 evening reviving ACJ Built / Nic Bray (T010, 27d stalled). Awaiting reply
+- Confirmed Alex pinged Bryan on Shamrock property (Linda's 343-unit Atlanta MF, $28M / $3M ask, assumable 4.4% agency + seller carry) — added queue #18
+- Logged VIP Client $1.2M Portfolio thread activity: Mo pushed back on lender (PIN Ventures) quote, asked for re-quote with proper portfolio valuation. Alex CC'd, watch only — queue #20
+- Logged Bryan-shared Follow-Up-Tracker-Template Google Sheet (workflow tooling) — queue #21
+- Logged personal: Adept Moving confirmation Fri 4/24 17:28 PT — queue #22
 
 ### 2026-04-15
 - Coordination layer created (INBOX_QUEUE, ACTIVE_TASKS, LAST_SYNC, COMPLETED_ACTIONS)
@@ -46,3 +57,4 @@
 ## Log Format
 
 Each entry: date, action taken, relevant deal or context. Keep entries to one line each.
+- 2026-04-26 01:46 UTC — inbox-wave triage: scanned 20 unread (1 actionable: Johny Omaga reply on Decatur gap, body image-only — logged as queue #23; 19 noise: AI Summit promos x8, Skool digests x5, Experian x2, real estate/charity/library promos x4)

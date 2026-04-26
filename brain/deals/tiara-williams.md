@@ -1,8 +1,10 @@
 # Deal: Tiara Williams — Fix & Flip (Decatur GA)
 
-**Status:** Active — Capital Stack / Funding Gap
-**Close Date Target:** April 8, 2026
+**Status:** ☠️ DEAD — failed at closing table, buyer did not have cash to close (confirmed 2026-04-23 and 2026-04-24)
+**Original Close Date Target:** April 8, 2026
 **Classification:** Capital stack opportunity (not standard high leverage flip)
+
+> **Operating rule:** Do not treat this as a live funding-gap deal unless a genuinely new buyer, structure, or reactivated path appears in the email threads. See `/root/memory/2026-04-23-parkhill-update.md` and `/root/memory/2026-04-24-tiara-failed-close.md`.
 
 ## Borrower
 - **Name:** Tiara Williams
