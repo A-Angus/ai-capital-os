@@ -2,7 +2,7 @@
 
 **Purpose:** Every new task, deal signal, email action, or unprocessed item lands here first. Nothing gets worked until it is logged here and moved to ACTIVE_TASKS.md.
 
-**Last Updated:** 2026-04-26 (01:46 UTC inbox-wave)
+**Last Updated:** 2026-04-27 (01:47 UTC inbox-wave — net new since 22:47 UTC = 2 emails, both Skool notifications (clutter, no action). Queue unchanged. Reminder: West Campus Towers call (queue #14) is TODAY Mon 4/27 12:30pm CST / 10:30am PT — Bryan running point. PandaDoc trial deadline (queue #26) was billed as "ends today Sun 4/26" — at 6:47 PM PT, ~5h window remains if Alex still wants to upgrade.)
 
 ---
 
@@ -37,6 +37,9 @@ Queue below carried forward from 2026-04-17. Many items may have moved (Craig Fo
 | 21 | Gmail / DSG | NEW: Bryan shared "Follow-Up-Tracker-Template" Google Sheet 4/24 22:58 UTC (sent to both alex.a@thesaultgroup.com and mr.alexangus@gmail.com) | 🟢 LOW | 2026-04-25 | Workflow tooling — Bryan offering shared follow-up tracker. Open + decide if adopting. Sheet ID 10EMIOqEpMo0oBeYtPIKa-NaVFHhlDl8jtnOVxGxeSd4. |
 | 22 | Gmail | Personal: Adept Moving — Moving Confirmation Fri 4/24 17:28 PT | 🟢 LOW | 2026-04-25 | Personal/operational — Alex has a move scheduled. Body unreadable (likely image). Not deal-related but worth flagging. Thread 19dc209b69bfbcee. |
 | 23 | Gmail | Johny Omaga (Vision Alchemy) replied 4/25 23:44 UTC to Alex's "Parkhill dead + send criteria for next gap deal" note | 🟡 MED | 2026-04-26 | Body is image-only (Outlook signature attachment "Book appointment" — actual reply text not extractable via gmail_tool). **Alex needs to open thread 19d9c1cf3153a4c5 manually to read Johny's response.** Follows up on queue item #3. |
+| 24 | Infra | Supabase: LEX Capital Engine project scheduled to be PAUSED in a couple days (>7d inactivity) | 🟡 MED | 2026-04-26 | Org LibertyEquityXchange, project ID sggfuxepiaxintmqecqb. Once paused: 90-day window to restore from dashboard, then data-only download. Decide: (a) keep alive (any DB activity resets timer), (b) upgrade to Pro to disable auto-pause, or (c) let pause + restore later. Email thread from ant.wilson@supabase.com 4/26 07:09 UTC. |
+| 25 | Gmail / DSG | Mojave Group (queue #11) — Otter + Fireflies meeting recaps for 4/24 Vegas projects call landed 4/24 evening | 🟢 WATCH | 2026-04-26 | Notes confirm: Brandon raised $95M historically, $500K min investment agreed, Bryan + Brandon to review pitch deck + PPM. Recordings available via Otter link. Aligns with queue #11 + #17 — no new action, just artifacts now in inbox. |
+| 26 | Gmail | PandaDoc trial ENDS TODAY (Sun 4/26) — "your trial ends today—don't lose your features" (Team PandaDoc 4/26 15:31 PT) | 🟡 MED | 2026-04-26 | PandaDoc was used for Graduate Champaign Capital Strategy Consulting Agreement (T004) and Toby/Bryan/Brandon NDAs. Decide today: (a) upgrade to paid (keeps doc workflow live for active DSG deals), (b) downgrade to free tier and accept feature loss, or (c) ignore. Thread 19dcb46d82f729e6. |
 
 ---
 
