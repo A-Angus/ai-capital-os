@@ -8,6 +8,13 @@
 
 ## April 2026
 
+### 2026-04-27
+- Inbox-wave 19:47 UTC: scanned ~50 unread since 16:47 UTC, 4 substantive
+- Marked queue #14 ✅ DONE — West Campus Towers call concluded; Bryan recap sent 17:34 UTC (thread 19dd001c9b180085): $300M project, $180M raise, Brandon engaged $60K + 3%, follow-up call mid-May. Alex watch only.
+- Updated queue #8 — Mike Kelly chased Bryan 13:36 ET on Highlands Project, Bryan FYI'd Alex (thread 19dd00efe3e8a41f). Bryan needs to reply this week or kill.
+- Confirmed Otter + Fireflies recordings of WCT call landed (artifacts only, no action)
+- Dropped: Keleisha Carter "last email" cohort sales close-out (noise)
+
 ### 2026-04-25
 - Inbox-wave 16:46 UTC: scanned 500+ unread, surfaced signal items, cleared queue item 6 (Graduate Champaign PandaDoc — both signed 4/13–4/14)
 - Added queue items 14 (West Campus Towers Austin call Mon 12:30 CST), 15 (Bryan VIP $1.2M portfolio fwd), 16 (Gilman's Pointe — Bryan replied to Nick)
@@ -59,3 +66,4 @@
 Each entry: date, action taken, relevant deal or context. Keep entries to one line each.
 - 2026-04-26 01:46 UTC — inbox-wave triage: scanned 20 unread (1 actionable: Johny Omaga reply on Decatur gap, body image-only — logged as queue #23; 19 noise: AI Summit promos x8, Skool digests x5, Experian x2, real estate/charity/library promos x4)
 - 2026-04-26 04:46 UTC | inbox-wave cron | Triaged inbox; no new items since 01:46 UTC wave. Queue unchanged (23 items). 30 unread total spanning Apr 20-25.
+- 2026-04-27 10:47 UTC | inbox-wave cron | Triaged 25 unread, 0 new actionable. **Queue #24 escalated**: Supabase LEX Capital Engine project now PAUSED (Apr 27 08:00 UTC) — 90d restore window started. Bryan Mojave May 6 invite already in queue #27. 22 messages = Skool/promo/marketing noise.

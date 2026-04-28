@@ -34,7 +34,7 @@ Borrower on the Parkhill Drive fix and flip deal. First deal closing through Eri
 
 ## Active Deals / Opportunities
 
-- 1793 Parkhill Drive GA — fix and flip, 100% financing via Creative Cash Partners (Eric Fuller / Nitin Daswani). Closing Friday April 17, 2026. Heritage Closing Firm (Holly Smith). Buyer's agent: Erin Walker.
+- 1793 Parkhill Drive GA — ☠️ **DEAD** (failed at closing table, confirmed 2026-04-23 / reconfirmed 2026-04-24). Buyer did not have cash to close (~$110K shortfall). Heritage Closing Firm (Holly Smith), buyer's agent Erin Walker. No LEX fee earned. See `brain/deals/tiara-williams.md` and `/root/memory/2026-04-23-parkhill-update.md`. Operating rule: don't treat as live unless genuinely new buyer/structure surfaces.
 
 ---
 
