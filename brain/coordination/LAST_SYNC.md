@@ -2,7 +2,7 @@
 
 **Purpose:** Snapshot of current state and recommended next actions. Updated every session.
 
-**Last Sync:** 2026-04-25
+**Last Sync:** 2026-04-29 01:21 UTC
 
 ---
 
@@ -52,25 +52,43 @@
 
 ---
 
-## Recent Context (Apr 23–25)
+## Recent Context (Apr 23–28)
 
 - **Parkhill: dead** (Apr 23 confirmed, Apr 24 reconfirmed). LAST_SYNC was wrong on this for 10 days. No $4,600 fee — that was based on a faulty close assumption.
 - **Bryan invited Alex** to "Capital for Warren Green Hotel" call Tue May 5 8am PT (with Brandon at Legends Acquisitions, Kash at Madison Dale).
 - **Other Apr 24 deal updates** in `/root/memory/`: `2026-04-24-malve-capital.md`, `2026-04-24-craig-fournier-dead-deal.md` (Craig Fournier deal also dead).
 - LexxBot identity scaffolding now in place — Lexx persona, Alex profile, workspace ops manual are loaded on every new session via openclaw bootstrap.
+- Inbox waves on Apr 28 were low-signal until the late pass surfaced a **new urgent live deal**: `700 W La Veta Ave Unit E4` Orange CA DSCR takeout with a June 1 bridge maturity. RCN capped around 70% LTV; borrower cannot fill the gap.
+- **Mike Kelly / Highlands moved another step forward** on Apr 28: Bryan asked for exclusivity, Mike said he is amenable depending on timeframe, and Bryan also forwarded the file docs to Brandon. The blocker is no longer silence; it is getting exclusivity terms nailed down and activating the lender push.
+- **Racquel Collier / Gibson Development** also progressed: entity docs + operating agreement landed, so that DSG file is now review-ready instead of passive wait-state.
 
 ---
 
 ## Recommended Next Actions (Priority Order)
 
-1. **Paul Brown call** — most time-sensitive, 10 days stale. 801-698-7171. Either call or formally kill.
-2. **Bryan / DFS review queue** — three items: Draw Schedule Prelim, Trades District deck + Brandon connection, West Campus Towers latest reply.
-3. **ResCap Partners decision** — does it go into CyclSales? Capital intake.
-4. **Rotate exposed API tokens** — Telegram + HighLevel (GitGuardian, now 11 days open).
-5. **Follow up on Coalson Excavation** — ~19 days stalled, Andrew Bohnker outreach was drafted Apr 22.
-6. **Fix Telegram outbound** for inbox-wave / morning-brief / evening-brief crons (broken delivery).
-7. **Inbox cleanup** (background): Tiara/Parkhill threads → Tiara label, Bryan deals → 💼 DFS/Bryan, lender promos → label or archive.
+1. **700 W La Veta Ave / Orange CA refinance rescue** — June 1 bridge maturity. RCN is only at ~70% LTV due to HOA drag; borrower says he cannot bring the gap. Need alternate lender / no-ratio / IO path or fresh cash plan fast.
+2. **Paul Brown call** — most time-sensitive stale outreach. 801-698-7171. Either call or formally kill.
+3. **Highlands / Mike Kelly exclusivity** — Mike is amenable depending on timeframe; Bryan/Brandon now need to set the exclusivity window and actually activate lender outreach.
+4. **Gibson Development / Racquel Collier** — org docs + operating agreement arrived; file is now review-ready.
+5. **ResCap Partners decision** — does it go into CyclSales? Capital intake.
+6. **Rotate exposed API tokens** — Telegram + HighLevel (GitGuardian, now 11+ days open).
+7. **Fix Telegram outbound** for inbox-wave / morning-brief / evening-brief crons (broken delivery).
 8. **Confirm Warren Green Hotel** call attendance for May 5 8am PT.
+
+---
+
+## Evening Brief Addendum (2026-04-29 01:00 UTC)
+
+- No later inbox pass changed the core picture after the 22:21 UTC wave.
+- Biggest email change today was the **700 W La Veta Ave / Orange CA** refinance rescue becoming a live June 1 fire-drill after RCN capped proceeds around 70% LTV and borrower said he cannot cover the gap.
+- Other real movement today: **Highlands / Mike Kelly** moved from chase mode toward exclusivity/lender activation, and **Gibson Development / Racquel Collier** became review-ready when entity docs landed.
+- **CRM:** no confirmed CRM writes/logged record changes today. CRM-adjacent work remains blocked or pending decision (ResCap/CyclSales disposition; broader CRM record-ID population still approval-gated in memory).
+
+## Late Inbox Addendum (2026-04-29 01:21 UTC)
+
+- Another pass confirmed **no new business urgency** after the 22:21 UTC wave.
+- New unread was mostly personal clutter: **Walmart order / cancellation traffic**, rental alerts, Skool digests, and generic lender marketing.
+- One minor cleanup signal: **Josh Lahr / CoreVest** acknowledged the dead Crownsville MD fix-and-flip thread, so that one can be treated as closed-loop with no further action needed.
 
 ---
 
@@ -86,4 +104,4 @@
 
 ## Next Sync Target
 
-End of next operator session or end of day.
+Next inbox-wave or end of day.

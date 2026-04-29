@@ -2,11 +2,18 @@
 
 **Purpose:** Record of all completed work across sessions. Provides audit trail and prevents duplicate effort.
 
-**Last Updated:** 2026-04-25
+**Last Updated:** 2026-04-28
 
 ---
 
 ## April 2026
+
+### 2026-04-28
+- Inbox-wave 10:48 UTC: scanned unread batch; no new urgent deal signal, only recurring Craig Fournier dead-thread nudges plus heavy promo/rental clutter
+- Refreshed INBOX_QUEUE, DAILY log, and LAST_SYNC to reflect unchanged urgency and standing need for Visio/RCN courtesy closeout notes
+- Inbox-wave 19:21 UTC: scanned latest unread batch; no new urgent deal threads, advanced Mike Kelly / Highlands note to internal-review status after Bryan forwarded docs to Brandon, and confirmed Craig Fournier courtesy closeouts remain the only clutter-reducing inbox actions
+- Evening-brief 2026-04-29 01:00 UTC: consolidated Apr 28 email/CRM status — Orange CA refi rescue emerged as top fire-drill; Highlands moved toward exclusivity; Gibson docs arrived; no confirmed CRM writes today
+- Inbox-wave 2026-04-29 01:21 UTC: scanned latest unread; no new business escalation beyond Orange/Highlands/Gibson, noted Walmart delivery/cancellation clutter, and confirmed Crownsville MD thread cleanly closed after Josh Lahr's courtesy reply
 
 ### 2026-04-27
 - Inbox-wave 19:47 UTC: scanned ~50 unread since 16:47 UTC, 4 substantive
