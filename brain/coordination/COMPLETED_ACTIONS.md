@@ -2,11 +2,20 @@
 
 **Purpose:** Record of all completed work across sessions. Provides audit trail and prevents duplicate effort.
 
-**Last Updated:** 2026-04-28
+**Last Updated:** 2026-04-29
 
 ---
 
 ## April 2026
+
+### 2026-04-30
+- Inbox-wave 01:24 UTC: triaged latest unread; inbox was still mostly clutter, logged Bryan's scheduled MailBox Money RE capital meeting for Mon May 4 11:30am PDT + Zoom link, and confirmed no new item displaced Orange CA / Highlands priorities
+
+### 2026-04-29
+- Inbox-wave 04:21 UTC: triaged overnight unread; no new item displaced Orange CA / Highlands / Gibson priorities, added Dusten Hendrickson capital-intro call invite for 9:15am PDT, and refreshed INBOX_QUEUE + LAST_SYNC
+- Inbox-wave 10:21 UTC: triaged latest unread; inbox was still mostly clutter, Gmail primary had no unread business mail, Mike Kelly Docs remained the only meaningful unread deal thread, and refreshed INBOX_QUEUE + LAST_SYNC
+- Inbox-wave 13:23 UTC: triaged midday unread; inbox was again mostly clutter, Gmail primary again had no unread business mail, Mike Kelly Docs remained the only meaningful unread deal thread, and refreshed INBOX_QUEUE + LAST_SYNC
+- Evening-brief 2026-04-30 01:00 UTC: consolidated Apr 29 email/CRM state — Rodolfo / 700 W La Veta bridge+sale explainer sent and borrower replied with pricing confusion questions; Mailbox Money relationship thread surfaced; no confirmed CRM writes beyond status monitoring / existing record-ID coverage confirmation
 
 ### 2026-04-28
 - Inbox-wave 10:48 UTC: scanned unread batch; no new urgent deal signal, only recurring Craig Fournier dead-thread nudges plus heavy promo/rental clutter
