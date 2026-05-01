@@ -10,6 +10,10 @@
 
 ### 2026-04-30
 - Inbox-wave 01:24 UTC: triaged latest unread; inbox was still mostly clutter, logged Bryan's scheduled MailBox Money RE capital meeting for Mon May 4 11:30am PDT + Zoom link, and confirmed no new item displaced Orange CA / Highlands priorities
+- Inbox-wave 04:24 UTC: triaged latest unread; inbox was still mostly clutter, but logged the Highlands exclusivity-agreement delivery issue and Rodolfo's request to price both sell and hold paths for 700 W La Veta, with no change to the top urgency stack
+- Inbox-wave 07:24 UTC: triaged latest unread; inbox was again mostly clutter, logged Erie PA moving into underwriting plus DigitalOcean's rescheduled SFO2 maintenance window, and confirmed no new issue displaced Orange CA / Highlands priorities
+- Inbox-wave 10:24 UTC: triaged latest unread; inbox was still mostly clutter, confirmed no new business thread changed the stack, and refreshed coordination notes to keep 700 W La Veta and Highlands as the active priorities
+- Inbox-wave 16:21 UTC: triaged latest unread; inbox was still mostly clutter, confirmed no new business signal after the morning brief, and refreshed coordination notes with unchanged urgency on 700 W La Veta and Highlands
 
 ### 2026-04-29
 - Inbox-wave 04:21 UTC: triaged overnight unread; no new item displaced Orange CA / Highlands / Gibson priorities, added Dusten Hendrickson capital-intro call invite for 9:15am PDT, and refreshed INBOX_QUEUE + LAST_SYNC

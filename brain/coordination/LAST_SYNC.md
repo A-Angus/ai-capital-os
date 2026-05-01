@@ -2,7 +2,7 @@
 
 **Purpose:** Snapshot of current state and recommended next actions. Updated every session.
 
-**Last Sync:** 2026-04-30 01:24 UTC
+**Last Sync:** 2026-05-01 01:21 UTC
 
 ---
 
@@ -106,6 +106,52 @@
 
 Next inbox-wave or end of day.
 
+## Inbox Wave Addendum (2026-05-01 01:21 UTC)
+
+- Latest unread pass was **still mostly clutter**: Red Oak rental alerts, Walmart/order traffic, wholesale property blasts, lender marketing, event promos, and account-summary noise.
+- **Two meaningful business changes surfaced:**
+  1. **Racquel Collier / Gibson Development** escalated from passive doc review to a **same-day $86,000 retainer wire request**. Bryan sent a loan agreement contract, then forwarded `Metro Flippers` wire instructions asking Racquel to send the deposit and receipt immediately so the process can start. This needs **verification before any funds move**.
+  2. **Material Capital Partners** moved from cold outreach to a scheduled intro: **Miller Robinson confirmed Friday 10:00am ET** works for a pipeline call with Bryan and asked whether to call Bryan's cell or get an invite.
+- **Urgency changes:** the top inbox interrupt is now **Racquel / Gibson** because money movement was introduced. **700 W La Veta Ave** remains the main live borrower fire. Highlands remains an execution follow-up, not a fresh inbox emergency.
+
+## Inbox Wave Addendum (2026-04-30 22:21 UTC)
+
+- Latest unread pass was **still mostly clutter**: Walmart/order traffic, Red Oak rental alerts, Skool/community digests, wholesale property blasts, lender marketing, promos, and account-summary noise.
+- **No new business thread changed the stack.** The only meaningful unread business items still visible were already-known items: **Bryan's `MailBox Money RE Capital Meeting` invite/Zoom link** for **Mon May 4, 11:30am PDT** and **DigitalOcean's SFO2 maintenance** note for **Mon May 4, 13:00-15:00 UTC**.
+- **Urgency stays unchanged:** 1) **700 W La Veta Ave Unit E4** because of the June 1 maturity and proceeds gap, 2) **Highlands / Mike Kelly** because the file is now waiting on Mike's questions/signature so lender outreach can start.
+
+## Inbox Wave Addendum (2026-04-30 19:21 UTC)
+
+- Another unread pass was **still mostly clutter**: Walmart order traffic, Red Oak rental alerts, Skool/community notifications, wholesale inventory blasts, and promos.
+- **No new business thread changed the stack.** The only meaningful unread business items still visible were already-known threads: **Bryan's `Mike Kelly Docs` package** remains unread, and **Mailbox Money RE** remains a scheduled relationship-development meeting rather than a borrower fire.
+- **Urgency stays unchanged:** 1) **700 W La Veta Ave Unit E4** because of the June 1 maturity and proceeds gap, 2) **Highlands / Mike Kelly** because the file is now waiting on Mike's questions/signature so lender outreach can start.
+
+## Inbox Wave Addendum (2026-04-30 16:21 UTC)
+
+- Latest unread pass was **still mostly clutter**: Dominion / lender marketing, Walmart order-status noise, Red Oak rental alerts, Skool digests, AI/course promos, and routine account notices.
+- **No new business thread changed the stack after the 15:00 UTC morning-brief pass.** The only meaningful unread business items were repeats already logged earlier today: **Erie, PA remains in underwriting** and **DigitalOcean's SFO2 maintenance remains rescheduled for Mon May 4, 13:00-15:00 UTC**.
+- **Urgency stays unchanged:** 1) **700 W La Veta Ave Unit E4** because of the June 1 maturity and proceeds gap, 2) **Highlands / Mike Kelly** because the file is now waiting on Mike's questions/signature so lender outreach can start, 3) **Mailbox Money RE** remains a relationship-development meeting, not a borrower fire.
+
+## Inbox Wave Addendum (2026-04-30 07:24 UTC)
+
+- Latest unread pass was **again mostly clutter**: Walmart traffic, Red Oak rental alerts, Skool digests, wholesale/off-market blasts, promos, webinars, and generic lender marketing.
+- The only meaningful business inbox change was **Bryan forwarding Jay Hussey's update on the Erie, PA 31-property portfolio**: processing is complete and the file is now in **underwriting**. Good movement, but no new ask to Alex yet.
+- One low-level infra item also surfaced: **DigitalOcean rescheduled SFO2 network maintenance** to **Mon May 4, 13:00-15:00 UTC**. They still expect no downtime.
+- **No new borrower/deal urgency surfaced.** Standing fire remains **700 W La Veta Ave Unit E4** because of the June 1 maturity and proceeds gap; secondary operator priority remains **Highlands / Mike Kelly exclusivity agreement re-send + lender activation**.
+
+## Inbox Wave Addendum (2026-04-30 10:24 UTC)
+
+- Another unread pass was **still mostly clutter**: Mutual of Omaha autopay reminder, Walmart traffic, Red Oak rental alerts, wholesale/off-market blasts, promos, webinars, and generic lender marketing.
+- **No new business thread changed the stack.** The only real signals in the inbox were repeats already logged earlier today: **Erie, PA remains in underwriting** and **DigitalOcean's SFO2 maintenance is still set for Mon May 4, 13:00-15:00 UTC**.
+- **Urgency stays the same:** 1) **700 W La Veta Ave Unit E4** because of the June 1 maturity and proceeds gap, 2) **Highlands / Mike Kelly** because the exclusivity agreement still needs clean re-delivery and then lender activation.
+
+## Morning Brief Addendum (2026-04-30 15:00 UTC)
+
+- Fresh unread pass was **still mostly clutter** overall.
+- One meaningful deal thread advanced: **Highlands / Mike Kelly** moved past the delivery confusion. Bryan followed up saying the agreement had been sent and **opened**, and asked Mike for any questions on the structure. That shifts the blocker from "did he get it?" to **getting questions answered or signature in so lender outreach can start**.
+- **Erie, PA 31-property portfolio** is still in **underwriting** — positive movement, but still just a watch item.
+- **No new closings or borrower fires appeared.** The top priority remains **700 W La Veta Ave Unit E4** because of the June 1 bridge maturity and proceeds gap; Highlands remains the next file to push.
+
 ## Evening Brief Addendum (2026-04-30 01:00 UTC)
 
 - **Email:** real movement today was concentrated in a few threads, not volume. Rodolfo / **700 W La Veta Ave** got a bridge-to-sale explanation and then pushed back with two concrete follow-ups: what the net-sale math meant and what the bridge would cost. That confirms the file is active but the borrower is still not aligned on direction. Separately, **Mailbox Money RE / Dusten Hendrickson** became the only meaningful new relationship thread today after Bryan's post-call note claiming a large pipeline and proposing a follow-up call. Everything else in Gmail was mostly clutter; **Mike Kelly Docs** remained sitting unread and did not change the Highlands action path.
@@ -167,3 +213,11 @@ Next inbox-wave or end of day.
 - The **only meaningful new inbox change** was Bryan locking the **MailBox Money RE Capital Meeting** for **Mon May 4, 11:30am-12:30pm PDT** and sending the Zoom link to Alex, Dusten, and Brandon.
 - **No new borrower/deal urgency surfaced.** Standing fire remains **700 W La Veta Ave Unit E4** because of the June 1 maturity and proceeds gap.
 - Secondary operator priority remains **Highlands / Mike Kelly exclusivity window + lender activation**; Mailbox Money is real relationship development, but not more urgent than those two files.
+
+## Inbox Wave Addendum (2026-04-30 04:24 UTC)
+
+- Latest unread pass was **again mostly clutter**: Walmart traffic, Red Oak rental alerts, Skool/community digests, wholesale property blasts, promos, and webinar marketing.
+- Two meaningful changes surfaced:
+  1. **Highlands / Mike Kelly** moved one notch forward procedurally, but the exclusivity doc did **not** land cleanly. Bryan told Mike the agreement had been sent, Mike replied he never received it, and Bryan said it should have come from **no-reply@dochub.com**. That means the next action is no longer abstract exclusivity talk — it is **re-send / verify delivery of the agreement**, then push lender outreach.
+  2. **700 W La Veta Ave Unit E4** got clearer borrower direction. Rodolfo asked for plain-English net-sale and bridge-cost math, then said to **price both sell and hold paths** because possible buyers are only in pre-approval and not guaranteed. Alex replied that he is sending the file to **three lenders** and will come back with comparisons in a few days.
+- **Urgency stack still does not change:** 700 W La Veta remains the active borrower fire because of the June 1 maturity and proceeds gap; Highlands remains the next operator item, now with a specific document-delivery blocker instead of vague follow-up.
