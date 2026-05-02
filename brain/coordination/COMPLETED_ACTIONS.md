@@ -2,11 +2,15 @@
 
 **Purpose:** Record of all completed work across sessions. Provides audit trail and prevents duplicate effort.
 
-**Last Updated:** 2026-04-29
+**Last Updated:** 2026-05-01
 
 ---
 
-## April 2026
+## May 2026
+
+### 2026-05-01
+- Inbox-wave 10:23 UTC: triaged latest unread; inbox was still mostly clutter, confirmed no new business thread changed the stack, and kept Racquel's $86,000 wire request / 700 W La Veta maturity gap / Material Capital timing watch as the current priorities
+- Inbox-wave 04:23 UTC: triaged latest unread; inbox was still mostly clutter, confirmed no new borrower fire displaced the stack, logged Material Capital's Friday 10:00am ET intro as a direct call to Bryan's cell, and kept Racquel's $86,000 wire request as the top verification-sensitive inbox risk
 
 ### 2026-04-30
 - Inbox-wave 01:24 UTC: triaged latest unread; inbox was still mostly clutter, logged Bryan's scheduled MailBox Money RE capital meeting for Mon May 4 11:30am PDT + Zoom link, and confirmed no new item displaced Orange CA / Highlands priorities

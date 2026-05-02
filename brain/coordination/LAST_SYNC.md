@@ -106,6 +106,12 @@
 
 Next inbox-wave or end of day.
 
+## Inbox Wave Addendum (2026-05-01 04:23 UTC)
+
+- Latest unread pass was **still mostly clutter**: Red Oak rental alerts, Walmart/order traffic, lender marketing, wholesale blasts, promos, and webinar/product noise.
+- **No new borrower or deal emergency surfaced.** The stack stays led by **Racquel / Gibson** (because the $86,000 retainer wire request now shows full wire instructions and same-day pressure, so verification is critical before any funds move) and **700 W La Veta Ave Unit E4** (because the June 1 maturity and refinance gap are still the real fire).
+- **Material Capital Partners** moved one step forward operationally: the **Friday 10:00am ET** intro is no longer tentative — Bryan confirmed **Miller Robinson should call Bryan's cell directly**, so logistics are locked.
+
 ## Inbox Wave Addendum (2026-05-01 01:21 UTC)
 
 - Latest unread pass was **still mostly clutter**: Red Oak rental alerts, Walmart/order traffic, wholesale property blasts, lender marketing, event promos, and account-summary noise.
@@ -221,3 +227,43 @@ Next inbox-wave or end of day.
   1. **Highlands / Mike Kelly** moved one notch forward procedurally, but the exclusivity doc did **not** land cleanly. Bryan told Mike the agreement had been sent, Mike replied he never received it, and Bryan said it should have come from **no-reply@dochub.com**. That means the next action is no longer abstract exclusivity talk — it is **re-send / verify delivery of the agreement**, then push lender outreach.
   2. **700 W La Veta Ave Unit E4** got clearer borrower direction. Rodolfo asked for plain-English net-sale and bridge-cost math, then said to **price both sell and hold paths** because possible buyers are only in pre-approval and not guaranteed. Alex replied that he is sending the file to **three lenders** and will come back with comparisons in a few days.
 - **Urgency stack still does not change:** 700 W La Veta remains the active borrower fire because of the June 1 maturity and proceeds gap; Highlands remains the next operator item, now with a specific document-delivery blocker instead of vague follow-up.
+
+## Inbox Wave Addendum (2026-05-01 07:23 UTC)
+
+- Another unread pass was **materially unchanged and still mostly clutter**: Walmart/order traffic, promos, lender marketing, a canceled Zoom notice, and stale old-thread residue.
+- **No new business item displaced the existing stack.** Inbox urgency is still: 1) **Racquel / Gibson** because the **$86,000 retainer wire request** is sitting there unverified, 2) **700 W La Veta Ave Unit E4** because the June 1 maturity and proceeds gap remain unresolved.
+- **Material Capital Partners** is now just a timing watch item rather than fresh triage: Bryan's **Friday 10:00am ET** call with Miller Robinson is already locked.
+- **Supabase / LEX Capital Engine** remains a stale infra decision in the unread pile: the project is paused and the 90-day restore window is still running.
+
+## Inbox Wave Addendum (2026-05-01 22:23 UTC)
+
+- 30 unread; ~26 are clutter (Red Oak rentals x9, Walmart traffic, Fund2Flip wholesale, Apartments.com, Astroblaster location ejects, DigitalOcean billing, Intuit, Floify MFA code, Justin Landesman newsletter, Sabrina/FuelMyDeal).
+- **Two new meaningful business items since the 19:23 UTC pass:**
+  1. **`716 Sports Complex — Financing Discussion Followup` calendar invite from Bryan to Alex** — Mon May 4, 8:00-8:45am PDT. This is the **dormant Justin Fineberg / Dofi Properties file resurfacing** (716 Sports Complex was cancelled 4/13 with no recovery; deal-tracker confirms). Justin also bounced a `Re: Intake Forms` reply to Bryan at 17:40 UTC today. Indicates Justin is re-engaging. **Alex needs to RSVP and prep.** Same Monday morning already carries **Mailbox Money RE Capital Meeting 11:30am PDT** (queue #33).
+  2. **NEW INBOUND COLD DEAL PITCH** — Robin (rss17enterprises@gmail.com) sent `Pitch deck for 228 Cotton Mill` with 3 PDFs (Exit Strategy memo, Investment summary, Sources & Uses). Empty body, no prior context. Net-new sponsor cold approach. Needs PDF triage before any reply.
+- **No new borrower fires.** Urgency stack unchanged: 1) **Racquel / Gibson $86K wire** still unverified before any funds move, 2) **700 W La Veta** June 1 maturity gap, 3) **Highlands / Mike Kelly** signature + lender activation.
+- **Material Capital intro call is past** (Bryan ↔ Miller Robinson 15:30-16:30 UTC window) — still no Bryan recap in inbox, watch for it through tonight / weekend.
+
+## Inbox Wave Addendum (2026-05-01 19:23 UTC)
+
+- Latest unread pass since the 16:23 UTC wave was **almost entirely clutter** (Red Oak rentals x6, Fund2Flip off-market, Apartments.com, generic noise).
+- **Material Capital intro call has now happened.** Bryan ↔ Miller Robinson scheduled call window was 11:30am-12:30pm ET = **15:30-16:30 UTC**, and we're now ~3 hours past that. **No post-call recap from Bryan in inbox yet.** Watch for Bryan's framing email later today / weekend.
+- **One DSG-internal item moved:** Justin Fineberg / Dofi Properties replied to Bryan on `Re: Intake Forms` at 17:40 UTC; body empty / image-only; **Alex still not in-thread** — pure DSG, watch only.
+- **No new borrower fires.** Urgency stack unchanged: 1) **Racquel / Gibson $86K wire** still unverified, 2) **700 W La Veta** June 1 maturity gap, 3) **Highlands / Mike Kelly** signature + lender activation.
+
+## Inbox Wave Addendum (2026-05-01 16:23 UTC)
+
+- Latest unread pass was **mostly clutter** (Apartments.com moving tips, Red Oak rentals, DigitalOcean billing, Popl, lender marketing, Otter, Make, Liberty Bank, Mutual of Omaha, Fund2Flip wholesale).
+- **Three meaningful business signals** since the 13:26 UTC pass:
+  1. **Material Capital Partners call moved**: Miller Robinson asked to slide from 10:00am ET to **11:30am-12:30pm ET** (15:30-16:30 UTC). Bryan agreed and confirmed he will call Miller around 11:30-11:45 ET. **The call is happening right now.** **Alex is now CC'd in-thread** (alex.a@thesaultgroup.com) on Bryan's 09:52 ET reply — so this is no longer purely watch-only.
+  2. **Bryan ↔ Justin Fineberg (Dofi Properties)** — `Re: Intake Forms` thread bouncing (10:16 ET). Body empty / image-only. Pure DSG, **Alex not in-thread**. Watch only.
+  3. **Visio Lending — Lower DSCR Rates effective 5/1/2026** — generic blast, but timely: could justify a Ryan Huddleston quote-refresh on **700 W La Veta** since the current best (RCN ~70% LTV) leaves the borrower with a gap.
+- **No new borrower fires.** Urgency stack unchanged: 1) **Racquel / Gibson $86K wire** unverified, 2) **700 W La Veta** June 1 maturity gap, 3) **Highlands / Mike Kelly** signature + lender activation.
+
+## Inbox Wave Addendum (2026-05-01 10:23 UTC)
+
+- Latest unread pass was **still mostly clutter**: Walmart/order traffic, wholesale inventory blasts, Red Oak rental alerts, Skool digests, lender marketing, and promo noise.
+- **No new borrower or capital-markets fire surfaced.** The urgency stack did not change.
+- Top inbox risk is still **Racquel Collier / Gibson Development** because the **$86,000 retainer wire request** remains unverified before any funds move.
+- The live deal fire is still **700 W La Veta Ave Unit E4** because the June 1 maturity and refinance proceeds gap remain unresolved.
+- **Material Capital Partners** remains a timing watch item only because Bryan's **Friday 10:00am ET** call is already locked, and **MailBox Money RE** stays a scheduled relationship meeting for **Mon May 4 11:30am PDT**, not a new emergency.
