@@ -235,6 +235,12 @@ Next inbox-wave or end of day.
 - **Material Capital Partners** is now just a timing watch item rather than fresh triage: Bryan's **Friday 10:00am ET** call with Miller Robinson is already locked.
 - **Supabase / LEX Capital Engine** remains a stale infra decision in the unread pile: the project is paused and the 90-day restore window is still running.
 
+## Inbox Wave Addendum (2026-05-02 22:23 UTC)
+
+- **🚨 GMAIL OAUTH STILL REVOKED — 5th consecutive blind inbox wave (~15 hours dark).** Token file at `/home/openclaw/.config/gogcli/token.json` last wrote 07:23 UTC 5/2; refresh continues to fail with `invalid_grant: Token has been expired or revoked`. **No inbox read possible** until Alex reauthorizes the gogcli OAuth flow.
+- **Risk escalation:** the evening-brief at 6pm PT (01:00 UTC Sun) will run blind, and the Mon morning-brief at 8am PT (15:00 UTC Mon) will run blind right before the **716 Sports Complex 8:00 PDT call (15:00 UTC)** — meaning Alex enters that call without a fresh inbox sweep unless OAuth is restored before then.
+- **No new business signal can be observed.** Standing urgent stack from the 13:23 UTC pass remains unchanged: (1) Gibson $86K wire fraud-risk verification, (2) 700 W La Veta June 1 maturity (now **30 days out**), (3) Highlands / Mike Kelly signature pending, (4) Mon 5/4 stacked AM (716 Sports Complex 8:00 PDT + Mailbox Money RE 11:30 PDT) RSVP + prep, (5) Gmail OAuth re-auth as blocker on all inbox/brief crons.
+
 ## Inbox Wave Addendum (2026-05-01 22:23 UTC)
 
 - 30 unread; ~26 are clutter (Red Oak rentals x9, Walmart traffic, Fund2Flip wholesale, Apartments.com, Astroblaster location ejects, DigitalOcean billing, Intuit, Floify MFA code, Justin Landesman newsletter, Sabrina/FuelMyDeal).
