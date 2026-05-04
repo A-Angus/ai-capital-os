@@ -91,3 +91,4 @@ Each entry: date, action taken, relevant deal or context. Keep entries to one li
 - 2026-04-26 01:46 UTC — inbox-wave triage: scanned 20 unread (1 actionable: Johny Omaga reply on Decatur gap, body image-only — logged as queue #23; 19 noise: AI Summit promos x8, Skool digests x5, Experian x2, real estate/charity/library promos x4)
 - 2026-04-26 04:46 UTC | inbox-wave cron | Triaged inbox; no new items since 01:46 UTC wave. Queue unchanged (23 items). 30 unread total spanning Apr 20-25.
 - 2026-04-27 10:47 UTC | inbox-wave cron | Triaged 25 unread, 0 new actionable. **Queue #24 escalated**: Supabase LEX Capital Engine project now PAUSED (Apr 27 08:00 UTC) — 90d restore window started. Bryan Mojave May 6 invite already in queue #27. 22 messages = Skool/promo/marketing noise.
+- 2026-05-03 22:23 UTC — inbox-wave: 2 new items (Bryan Drive shares Julian Brittano Docs + Back Swamp = queue #46); active urgent stack unchanged; Mon 5/4 stacked AM ~16.5h out
