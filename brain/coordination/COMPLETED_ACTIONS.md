@@ -8,6 +8,13 @@
 
 ## May 2026
 
+### 2026-05-06
+- Inbox-wave 01:24 UTC: confirmed no net-new business email displaced the stack, verified the live unread window is down to four real threads (Julian agreement, Northwest / LEXQZT renewal, and the two Gibson wire/loan-doc threads), cleared 25 additional legacy unread backlog threads, and refreshed INBOX_QUEUE + ACTIVE_TASKS + LAST_SYNC + daily log
+
+### 2026-05-05
+- Inbox-wave 13:23 UTC: confirmed no net-new unread business mail since 10:23 UTC, cleared 9 obvious clutter/admin unread to cut the live pile down to 7 meaningful items, confirmed Warren Green Hotel as the immediate live interrupt, and logged EPath's moved 3:00-4:00pm PDT call time in INBOX_QUEUE + LAST_SYNC
+- Inbox-wave 10:23 UTC: confirmed no net-new unread business mail since 07:23 UTC, elevated Warren Green Hotel as the nearest live meeting item for today 8:00am PDT, re-added Esmeralda Cloverdale as a live watch after fresh 5/4 thread activity, and refreshed INBOX_QUEUE + daily log
+
 ### 2026-05-01
 - Inbox-wave 10:23 UTC: triaged latest unread; inbox was still mostly clutter, confirmed no new business thread changed the stack, and kept Racquel's $86,000 wire request / 700 W La Veta maturity gap / Material Capital timing watch as the current priorities
 - Inbox-wave 04:23 UTC: triaged latest unread; inbox was still mostly clutter, confirmed no new borrower fire displaced the stack, logged Material Capital's Friday 10:00am ET intro as a direct call to Bryan's cell, and kept Racquel's $86,000 wire request as the top verification-sensitive inbox risk

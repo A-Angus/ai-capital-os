@@ -2,117 +2,123 @@
 
 **Purpose:** Everything currently being worked. Organized by urgency. Items move here from INBOX_QUEUE.md and get removed when complete (logged to COMPLETED_ACTIONS.md).
 
-**Last Updated:** 2026-04-17
+**Last Updated:** 2026-05-05 19:45 UTC
 
 ---
 
-## 🔴 URGENT (Deadline within 7 days)
+## 🔴 URGENT (Deadline within 7 days / same-day live items)
 
-### T001 — Parkhill Drive Closing (TODAY Apr 17) 💰
-- **Deal:** 1793 Parkhill Drive GA / Tiara Williams
-- **Entity:** Liberty Equity Xchange
-- **Lender:** Creative Cash Partners (Eric Fuller / Nitin Daswani / Abraham Gray)
-- **Closing firm:** Heritage Closing Firm (Cheri Dukett closer, Holly Smith pre closer)
-- **Status:** CLOSING TODAY. Signing at 2pm ET at Sugarloaf. HUD approved. Fee: $4,600 Capital Placement Fee to Liberty Equity Xchange LLC. Lender wires: VIAMA and RRR 401K plan received. Nitin confirming remaining wires.
-- **Blockers:** None for closing. Gap funding with Johny Omaga (Vision Alchemy) is separate and still pending.
-- **Next:** Monitor closing confirmation. Track fee payment.
-- **Added:** 2026-04-15 | **Updated:** 2026-04-17
+### T001 — EPath Multiple Projects SoCal Call
+- **Type:** Meeting / capital intake
+- **Entity:** Dream Solutions Group / Sault Group relationship
+- **Status:** Live same-day item. Updated invite moved the meeting to **Tue May 5, 3:00-4:00pm PDT / 22:00-23:00 UTC**. Alex is marked optional on the guest list.
+- **Participants:** Bryan Marriott, Sandy Oluwek, Anthony Bahamondes, Brandon, Alex
+- **What matters:** PATH wants help completing capital stacks across **8 projects** and may also need **predevelopment funding**.
+- **Known project updates:** Normandie awarded LACAHSA funding; East LA now targeting September construction close; Villas on the Row is entitled.
+- **Blockers:** None on logistics; prep and attendance decision are the only live needs.
+- **Next:** Join if attending; capture takeaways and immediate follow-up asks.
+- **Added:** 2026-05-05 | **Updated:** 2026-05-05
 
-### T002 — Colosseum Sports Resort Call (TODAY Apr 17 at 12:30pm PT)
-- **Deal:** $350M ground up, Stafford VA / Farshid Hakimyar
+### T002 — Gibson Development / $86K Retainer Wire Verification
+- **Type:** Money movement / fraud-risk verification
 - **Entity:** Dream Solutions Group
-- **Call:** TODAY 3:30pm EST / 12:30pm PT via Zoom. Bryan, Brandon, Farshid, Chris (Solve for X).
-- **Status:** Executive summary from Farshid is in Bryan's forwarded email (Apr 14). Zoom link sent by Bryan.
-- **Blockers:** None
-- **Next:** Join call, discuss capital structure, determine equity vs debt split
-- **Added:** 2026-04-15 | **Updated:** 2026-04-17
+- **Status:** Bryan's unread pair requests a signed loan agreement and **same-day $86,000 retainer deposit** with receipt back for underwriting/accounting proof.
+- **Blockers:** Wire instructions and funding path need verification before any money moves.
+- **Next:** Verify authenticity of wire instructions / settlement request and confirm whether sponsor has responded.
+- **Added:** 2026-05-01 | **Updated:** 2026-05-05
 
-### T003 — Craig Fournier DSCR: Broker Comp Replies
-- **Deal:** Orange Park 4plex / Craig Fournier
+### T003 — 700 W La Veta Ave Unit E4 Refinance Rescue
+- **Type:** Borrower fire / maturity deadline
 - **Entity:** Liberty Equity Xchange
-- **Status:** RCN (80% LTV) and Visio both quoted. Need to reply with broker comp to both.
-- **Blockers:** Alex needs to decide comp structure
-- **Next:** Reply to Christopher Cardenas (RCN) and Ryan Huddleston (Visio)
-- **Added:** 2026-04-15
+- **Status:** June 1 bridge maturity remains the main live borrower issue. RCN was capped around ~70% LTV and borrower said he cannot fill the gap.
+- **Blockers:** Need alternate lender / no-ratio / IO path or fresh cash solution; Rodolfo has been quiet since 4/30.
+- **Next:** Re-engage on alternate execution path and surface lender/cash-gap options.
+- **Added:** 2026-04-28 | **Updated:** 2026-05-05
 
-### T004 — Graduate Champaign Hotel: PandaDoc Signatures
-- **Deal:** $38M capital raise / Toby + Brandon Henry
+### T004 — Mike Kelly / Highlands Exclusivity Execution
+- **Type:** Deal execution follow-through
 - **Entity:** Dream Solutions Group
-- **Status:** Capital Strategy Consulting Agreement sent via PandaDoc 4/14. Awaiting signatures.
-- **Blockers:** Waiting on Toby and Brandon
-- **Next:** Confirm signatures, begin capital strategy once signed
-- **Added:** 2026-04-15
+- **Status:** Mike indicated he is amenable to exclusivity depending on timeframe; blocker is converting that into actual terms and lender activation.
+- **Blockers:** Exclusivity window and execution terms not nailed down.
+- **Next:** Lock exclusivity window and push lender outreach live.
+- **Added:** 2026-04-28 | **Updated:** 2026-05-05
 
 ---
 
-## 🟡 ACTIVE (In progress, no immediate deadline)
+## 🟡 ACTIVE (In progress, not same-day urgent)
 
-### T005 — Alluinn Development / Trades District Hotel
-- **Deal:** $67M Marriott hotel, Bloomington IN / Charles Whittaker
+### T005 — LEXQZT Enterprise LLC California Renewal
+- **Type:** Admin / compliance
+- **Entity:** LEXQZT Enterprise LLC
+- **Status:** Northwest Registered Agent renewal notice is still sitting as a low-grade admin follow-up.
+- **Blockers:** None beyond deciding whether to pay/process now.
+- **Next:** Review deadline and fee; decide whether to process or defer.
+- **Added:** 2026-05-03 | **Updated:** 2026-05-05
+
+### T006 — MailBox Money RE / Dusten Next-Step Materials
+- **Type:** Capital intake follow-up
 - **Entity:** Dream Solutions Group
-- **Status:** NDA + investor deck incoming from Charles
-- **Blockers:** Waiting on NDA and deck
-- **Next:** Execute NDA, review package, analyze $20M equity raise feasibility
-- **Added:** 2026-04-15
+- **Status:** Post-call thread is active, but ball is in Dusten's court for project overview, 5-year resume, total capital required, ARV, and hold period.
+- **Blockers:** Waiting on sponsor materials.
+- **Next:** Watch for reply; if quiet, follow up after a reasonable wait.
+- **Added:** 2026-05-05 | **Updated:** 2026-05-05
 
-### T006 — Caliber RE / Gibson Rd MF Development
-- **Deal:** Multifamily development, 100% financing / Racquel Collier
+### T007 — Atlanta All Sports Dome Agreement Activated
+- **Type:** Deal activation / watch
 - **Entity:** Dream Solutions Group
-- **Status:** Bryan forwarded executed docs and intake form. Waiting on MetroFlippers quote from Rafa Culpo.
-- **Blockers:** Awaiting MetroFlippers quote
-- **Next:** Review intake docs, run deal intake checklist
-- **Added:** 2026-04-15
+- **Status:** Consulting agreement has been signed and returned; file is activated.
+- **Blockers:** Alex's role / fee structure still needs clarity if deeper involvement is required.
+- **Next:** Watch for next sponsor or capital-stack request.
+- **Added:** 2026-05-03 | **Updated:** 2026-05-05
 
-### T007 — Atlanta All Sports Dome
-- **Deal:** $10M development / Bryan, Mo Castro, Kevin Dattola
+### T008 — Esmeralda Cloverdale Re-engagement Watch
+- **Type:** Deal watch / active thread
 - **Entity:** Dream Solutions Group
-- **Status:** Cost & Development Summary shared 4/13
-- **Blockers:** Need to determine Alex's role and fee structure
-- **Next:** Review summary, assess capital structure
-- **Added:** 2026-04-15
+- **Status:** Devon Zuegel replied on 5/4 and Bryan responded twice, putting this back into the active queue.
+- **Blockers:** Need to see whether the thread turns into a defined ask.
+- **Next:** Monitor for concrete follow-up requirements.
+- **Added:** 2026-05-05 | **Updated:** 2026-05-05
 
-### T008 — API Token Rotation
+### T009 — Julian Brittano Agreement Routing
+- **Type:** Outbound document routing / sponsor intake
+- **Entity:** Dream Solutions Group
+- **Status:** Mo sent Bryan a signed consulting-agreement PDF with explicit instruction to send it to Julian in a separate email chain. This is now a concrete routing/send decision rather than a generic folder-review task.
+- **Blockers:** External send is still unsent; any outbound email to a brand-new external contact remains approval-sensitive.
+- **Next:** If Alex wants it sent, draft/review the separate Julian email chain and send the agreement.
+- **Added:** 2026-05-03 | **Updated:** 2026-05-06
+
+### T010 — API Token Rotation
 - **Type:** Security
-- **Status:** GitGuardian alert on Telegram + HighLevel tokens
-- **Blockers:** None
-- **Next:** Rotate tokens, update .env, verify services still running
-- **Added:** 2026-04-15
+- **Status:** GitGuardian alert on Telegram + HighLevel tokens remains open.
+- **Blockers:** Rotation work still not executed.
+- **Next:** Rotate exposed tokens, update configs, and verify services.
+- **Added:** 2026-04-15 | **Updated:** 2026-05-05
 
 ---
 
-## ⚪ STALLED (No movement >7 days)
+## ⚪ STALLED / NEEDS DECISION
 
-### T009 — Coalson Excavation / $11M TX Land Bridge
-- **Deal:** Kennedy Funding / Chase Wolfer / Andrew Bohnker
-- **Entity:** Liberty Equity Xchange
-- **Status:** Last activity Apr 6. Chase said no rush. Borrower side working through something.
-- **Days stalled:** 9+
-- **Next:** Follow up with Andrew Bohnker. If no response by Apr 18, flag as at risk.
-- **Added:** 2026-04-15
+### T011 — Paul Brown Outreach Decision
+- **Type:** Stale outreach / disposition
+- **Status:** Long-stale item still unresolved.
+- **Blockers:** Needs Alex decision to call or kill.
+- **Next:** Decide whether to re-engage or close out.
+- **Added:** 2026-04-15 | **Updated:** 2026-05-05
 
-### T010 — ACJ Built / Construction Bridge
-- **Deal:** Nic Bray / JZ Zendejas referral / The Accredited Group
-- **Entity:** Liberty Equity Xchange
-- **Status:** Funding app sent to JZ for Nic on Mar 18. No response in 27 days.
-- **Days stalled:** 27
-- **Next:** Follow up with JZ Zendejas on app completion. If still blank, consider shelving.
-- **Added:** 2026-04-15
-
-### T011 — Gheorghe Cucu / Auto Shop
-- **Deal:** Business acquisition, Washington
-- **Entity:** Liberty Equity Xchange
-- **Status:** 30+ days no activity
-- **Days stalled:** 30+
-- **Next:** Reach out to Gheorghe. If no response, move to dead.
-- **Added:** 2026-04-15
+### T012 — ResCap Partners / CyclSales Decision
+- **Type:** Capital intake routing
+- **Status:** Still pending disposition.
+- **Blockers:** Needs Alex decision on whether it belongs in CyclSales.
+- **Next:** Decide route or drop.
+- **Added:** 2026-04-15 | **Updated:** 2026-05-05
 
 ---
 
 ## Task Rules
 
 1. Tasks enter from INBOX_QUEUE.md only
-2. Each task has an ID (T###), deal reference, status, blockers, and next action
-3. URGENT = deadline within 7 days
-4. STALLED = no movement in 7+ days
+2. Each task has an ID (T###), reference, status, blockers, and next action
+3. URGENT = deadline within 7 days or live same-day operational item
+4. STALLED = no movement in 7+ days or waiting on an explicit Alex decision
 5. When a task completes, remove it from here and log to COMPLETED_ACTIONS.md
-6. Night operator scans this file nightly to flag urgent/stalled items
+6. Keep this file current enough that a fresh session can operate from it without reconstructing the whole inbox

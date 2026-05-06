@@ -2,7 +2,7 @@
 
 **Purpose:** Snapshot of current state and recommended next actions. Updated every session.
 
-**Last Sync:** 2026-05-01 01:21 UTC
+**Last Sync:** 2026-05-05 10:23 UTC
 
 ---
 
@@ -105,6 +105,72 @@
 ## Next Sync Target
 
 Next inbox-wave or end of day.
+
+## Inbox Wave Addendum (2026-05-05 16:23 UTC)
+
+- **Inbox cleanup actually landed this pass.** Using `gog gmail`, I marked **69 additional non-urgent unread threads read** across promos, rental alerts, newsletters, stale recaps, and watch-only Drive-share/admin residue.
+- That cut the visible unread pile down to the real action set. **Only five clearly actionable unread threads remain:** **EPath updated invite / Zoom**; **Northwest Registered Agent / LEXQZT CA renewal**; **Bryan `Fwd: Financing discussions`**; **Bryan `Loan Agreement Contract`**; and **Bryan `Fwd: Bank / Wire Information`** for the Gibson / Metro Flippers retainer request.
+- **Warren Green Hotel is no longer a scheduling interrupt.** The live inbox change there is now informational only: Otter + Fireflies recaps landed after the call, confirming substantive financing discussion rather than a missed logistics thread.
+- **EPath remains the only same-day inbox interrupt still ahead**: the updated invite includes the actual **Zoom link**, meeting ID **849 6205 9230**, passcode **046456**, for **22:00-23:00 UTC / 3:00-4:00pm PDT**.
+- **No new borrower fire surfaced.** The urgency order after cleanup is: **(1) EPath today 22:00 UTC, (2) Gibson $86K wire / loan-doc verification, (3) 700 W La Veta June 1 maturity with no new inbound, (4) Highlands / Mike Kelly execution, (5) Northwest LEXQZT renewal as low-grade admin follow-up.**
+
+## Inbox Wave Addendum (2026-05-05 19:23 UTC)
+
+- Cleared another **~35 low-value unread threads** (Skool/community noise, promos, rental alerts, stale invites, and old admin residue) after the 16:23 UTC sweep.
+- The unread stack is still basically the same real work: **EPath / financing discussions**, **Gibson loan agreement + $86K wire instructions**, **700 W La Veta June 1 maturity**, and **Northwest / LEXQZT renewal**.
+
+## Inbox Wave Addendum (2026-05-05 22:23 UTC)
+
+- Another cleanup wave landed. I marked the **EPath invite/follow-up**, **Warren Green recap traffic**, **Miramar FYI thread**, **Justin Fineberg intake-form thread**, **Material Capital scheduling thread**, **Astroblaster noise**, and several **stale 2025 legacy unread threads** read.
+- The live unread stack is now down to the **true action items**: **Julian Brittano consulting agreement** (Mo asked Bryan to send it to Julian in a separate chain), **Northwest / LEXQZT CA renewal**, and the two **Gibson / Metro Flippers** threads (**Loan Agreement Contract** + **$86K wire instructions**).
+- **No new borrower/deal fire surfaced.** The urgency order remains: **(1) Gibson wire/contract verification, (2) 700 W La Veta rescue, (3) Highlands / Mike Kelly follow-through, (4) Julian routing/send decision, (5) Northwest renewal admin**.
+- **`Fwd: Financing discussions` is now confirmed substantive, not clutter**: Sandy at ePath summarized PATH's need for partners to complete capital stacks plus possible predevelopment funding, with Anthony Bahamondes as the operating contact and availability windows for follow-up.
+- **Gibson remains the biggest money-risk inbox item**: Bryan's two unread emails to Racquel explicitly request a signed loan agreement and same-day settlement of an **$86,000 retainer deposit** with receipt back for underwriting/accounting proof.
+- **No net-new fire surfaced.** Current inbox urgency: **(1) EPath call / prep tonight, (2) Gibson retainer-wire verification before any funds move, (3) 700 W La Veta refinance rescue, (4) Mike Kelly / Highlands execution follow-through, (5) Northwest CA renewal admin.**
+
+## Evening Brief Addendum (2026-05-06 01:00 UTC)
+
+- **Email changed materially through cleanup, not fresh inflow.** I cleared a large amount of stale unread clutter and watch-only traffic, which brought the inbox down to the real action threads instead of noise.
+- **Same-day email movement today:** Warren Green Hotel and EPath meeting logistics were confirmed and then deprioritized after their windows; Sandy's ePath follow-up clarified PATH needs help finishing capital stacks across **8 projects** and may also need **predevelopment funding**.
+- **The inbox ended the day concentrated in four actionable threads:** the two **Gibson / Metro Flippers** messages (signed loan agreement + **$86K retainer wire** request), **Julian Brittano consulting agreement routing/send**, and **Northwest Registered Agent / LEXQZT CA renewal**.
+- **CRM:** no confirmed CRM writes or logged record changes surfaced today. The day's movement was inbox triage, meeting prep, and deal-status clarification rather than system updates.
+- **Most urgent carry-forward:** (1) verify Gibson before any funds move, (2) re-engage **700 W La Veta** before the June 1 maturity gets tighter, (3) convert **Mike Kelly / Highlands** from tentative exclusivity into live lender outreach, (4) resolve Julian agreement routing, (5) handle LEXQZT renewal admin.
+
+## Inbox Wave Addendum (2026-05-06 01:24 UTC)
+
+- **No net-new business email displaced the stack.** This pass was mostly about confirming that the inbox is now genuinely narrow instead of just quieter.
+- **The active unread window is still just four threads:** **Julian Brittano consulting agreement**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads (**loan agreement** + **$86K wire instructions**).
+- **Julian got sharper this wave:** Mo's note is explicit — Bryan should send the attached consulting agreement to Julian in a separate email chain. That is now a defined outbound-routing task, not a vague Drive-share review.
+- I also **cleared 25 additional legacy unread threads** from the older backlog so the active inbox stays signal-heavy, though deeper 2025 residue still exists if we want a separate archive-cleanup pass later.
+- **Urgency order is unchanged:** (1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) Mike Kelly / Highlands execution, (4) Julian routing/send decision, (5) LEXQZT renewal admin.
+
+## Inbox Wave Addendum (2026-05-05 13:23 UTC)
+
+- **No net-new unread business mail since the 10:23 UTC wave.** The inbox signal was materially unchanged.
+- I **reduced clutter by marking 9 obvious admin/noise emails read** (Amex statement, Intuit receipt, stale MFA/canceled-meeting/order noise), leaving **7 meaningful unread items** instead of a mixed pile.
+- **Warren Green Hotel is now the immediate interrupt**: Teams invite/thread still unread and the call is **today at 8:00am PDT / 15:00 UTC**.
+- **EPath remains the other same-day live item, and the invite has explicitly moved to 3:00-4:00pm PDT / 22:00-23:00 UTC** from the earlier 12:30-1:30pm hold.
+- **No new borrower fire surfaced.** 700 W La Veta, Gibson wire verification, and Highlands stay in the same order behind today’s meeting stack.
+
+## Inbox Wave Addendum (2026-05-05 10:23 UTC)
+
+- **No net-new unread business mail since the 07:23 UTC wave.** The inbox was materially unchanged, but two same-day meeting items still deserve attention.
+- **Warren Green Hotel is now the nearest live interrupt**: Bryan and Grace both touched the thread on 5/4, and the call is **today at 8:00am PDT / 15:00 UTC**. That item now outranks the rest of the inbox simply on timing.
+- **EPath still matters later today**: the 8-project pre-development financing call remains set for **3:00-4:00pm PDT / 22:00-23:00 UTC**.
+- **Esmeralda Cloverdale resurfaced** after a quiet stretch: Devon Zuegel replied on 5/4 and Bryan answered twice, so that file moved from passive cooling-watch back into the active queue.
+- Clutter was mostly unchanged admin noise: **Amex May statement, Intuit subscription receipt, stale Drive-share notices**.
+- **Urgency stack after this pass:** (1) Warren Green today 8am PDT, (2) EPath today 3pm PDT, (3) Gibson $86K wire verification, (4) 700 W La Veta June 1 maturity, (5) Highlands / Mike Kelly signature.
+
+## Inbox Wave Addendum (2026-05-05 04:23 UTC)
+
+- **`gog` CLI worked cleanly — inbox read successful** (gmail_tool.py still broken with `invalid_grant`, but `gog gmail list` uses the same token store and refreshes fine). Resumed full visibility.
+- **Three meaningful new business items since last logged wave (5/3 22:23 UTC):**
+  1. **MailBox Money RE call recap landed (5/5 01:00 UTC):** Bryan sent `Dustin — Great Call Today. Next Steps.` to Dusten + Brandon + Alex. Brandon followed up asking Dusten for project overview, 5-year resume, total capital required, ARV, hold period — standard pre-engagement-agreement intake. Ball is in Dusten's court. Watch only for Alex.
+  2. **🆕 EPath call TODAY Tue 5/5 3:00-4:00pm PDT (22:00-23:00 UTC) — Sandy O. + Anthony Bahamondes + Bryan + Brandon + Alex.** Bryan updated the invite at 18:58 UTC 5/4 (Zoom link in thread `19df45afd001b7a1`). This is the kick-off for ePath's 8-project pre-development financing pipeline.
+  3. **Atlanta All Sports Dome consulting agreement signed and returned (5/4 18:58 UTC):** Kevin Dattola sent in `Sault Group Consulting Agreement` PDF (2.2MB), Bryan FYI'd Alex. Queue #7 advances from "out for sponsor signature" to "agreement executed / file activated."
+- **Otter + Fireflies recaps for 716 Sports Complex Mon AM call also landed** — meeting did happen, summaries available if Alex wants the AI transcript before deciding next move on Justin Fineberg / Dofi Properties re-engagement.
+- **No new borrower fires.** 700 W La Veta still silent from Rodolfo (last outbound was Alex 4/30 16:55 UTC, 5 days ago — June 1 maturity is now **27 days out**). Gibson $86K wire still no resolution visible (last Bryan inbound was 4/28). Highlands / Mike Kelly unchanged.
+- **Urgency stack:** (1) **EPath call TODAY 3pm PDT** — needs RSVP + prep; (2) Gibson $86K wire fraud-risk — still unverified; (3) 700 W La Veta June 1 maturity — 27 days out, Rodolfo silent; (4) Highlands / Mike Kelly signature; (5) MailBox Money is now watch-only pending Dusten materials.
 
 ## Inbox Wave Addendum (2026-05-01 04:23 UTC)
 
