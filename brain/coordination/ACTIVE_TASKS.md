@@ -2,22 +2,22 @@
 
 **Purpose:** Everything currently being worked. Organized by urgency. Items move here from INBOX_QUEUE.md and get removed when complete (logged to COMPLETED_ACTIONS.md).
 
-**Last Updated:** 2026-05-05 19:45 UTC
+**Last Updated:** 2026-05-06 04:26 UTC
 
 ---
 
 ## 🔴 URGENT (Deadline within 7 days / same-day live items)
 
-### T001 — EPath Multiple Projects SoCal Call
-- **Type:** Meeting / capital intake
+### T001 — EPath Multiple Projects SoCal Follow-Through
+- **Type:** Meeting follow-up / capital intake
 - **Entity:** Dream Solutions Group / Sault Group relationship
-- **Status:** Live same-day item. Updated invite moved the meeting to **Tue May 5, 3:00-4:00pm PDT / 22:00-23:00 UTC**. Alex is marked optional on the guest list.
+- **Status:** Call has happened. Fireflies recap confirms PATH is discussing **8 projects** plus roughly **$2M-$3M predevelopment need**; no same-day inbox ask is sitting open now.
 - **Participants:** Bryan Marriott, Sandy Oluwek, Anthony Bahamondes, Brandon, Alex
 - **What matters:** PATH wants help completing capital stacks across **8 projects** and may also need **predevelopment funding**.
 - **Known project updates:** Normandie awarded LACAHSA funding; East LA now targeting September construction close; Villas on the Row is entitled.
-- **Blockers:** None on logistics; prep and attendance decision are the only live needs.
-- **Next:** Join if attending; capture takeaways and immediate follow-up asks.
-- **Added:** 2026-05-05 | **Updated:** 2026-05-05
+- **Blockers:** Need the actual project packet / next sponsor-side follow-up to turn the relationship into active lender work.
+- **Next:** Watch for Sandy / Bryan follow-up with project-level details and a defined ask.
+- **Added:** 2026-05-05 | **Updated:** 2026-05-06
 
 ### T002 — Gibson Development / $86K Retainer Wire Verification
 - **Type:** Money movement / fraud-risk verification

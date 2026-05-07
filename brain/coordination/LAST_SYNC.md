@@ -106,6 +106,29 @@
 
 Next inbox-wave or end of day.
 
+## Inbox Wave Addendum (2026-05-06 16:27 UTC)
+
+- **No new inbox fire displaced the stack.** The active 2026 inbox is still concentrated in **West Campus**, **Google security alert**, **Julian routing**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads.
+- **One net-new watch item surfaced:** **Mo Castro `Miramar FL`** with three PDFs and an explicit "keep this close to the vest" note. Real file, but not a same-day interrupt.
+- **Cleanup landed again:** I marked **44 year-old unread messages** read to keep the live inbox focused on current work.
+- **Urgency remains:** (1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) West Campus sponsor follow-through, (4) Highlands execution, (5) Julian send/routing decision.
+
+## Inbox Wave Addendum (2026-05-06 22:28 UTC)
+
+- **One real new business thread surfaced; otherwise the inbox stayed tight.** Bryan sent **`Kevin Datolla — Start Gap Lender Conversations ($3.4-3.6M)`** to **Jay Hussey + Mo + Alex** asking Jay to start shopping **Kevin Dattola's 4 active sports-dome sites** to gap lenders this week.
+- Bryan framed the ask at **$3.4M-$3.6M total** / **$850K-$900K per dome** and wanted appetite confirmed before briefing Kevin on terms.
+- I logged that as **INBOX_QUEUE #51** and then **filed the thread out of Inbox** so it is tracked work, not inbox clutter.
+- I also **filed a myFICO credit-alert out of Inbox** as personal monitoring noise.
+- **Inbox hold set is still only two threads:** **DigitalOcean verification code** and **Northwest / LEXQZT CA renewal**.
+- **Urgency stack stayed mostly the same:** Gibson verification, 700 W La Veta rescue, West Campus follow-through, Highlands execution, then Kevin Dattola's new gap-lender push.
+
+## Inbox Wave Addendum (2026-05-06 19:27 UTC)
+
+- **This pass finished the inbox compression.** I filed **Miramar FL** out of Inbox under **`💼 Deals/Active` + `✍️ Waiting on Response`** after Josh's latest note clarified he expects to revert **by end of day**.
+- I also routed **11 non-urgent inbox threads** into proper homes (**Notifications, Marketing, Banking, Accounting, Receipts, Legal**) and removed four already-tracked read deal threads from Inbox because they were no longer true inbox interrupts.
+- **Verification gate:** `in:inbox is:unread` is now **0**.
+- **Only two threads remain intentionally held in Inbox:** **DigitalOcean verification code** and **Northwest / LEXQZT CA renewal**.
+- **No urgency change:** Gibson wire verification, 700 W La Veta, West Campus follow-through, Highlands execution, and Julian routing stay the real stack.
 ## Inbox Wave Addendum (2026-05-05 16:23 UTC)
 
 - **Inbox cleanup actually landed this pass.** Using `gog gmail`, I marked **69 additional non-urgent unread threads read** across promos, rental alerts, newsletters, stale recaps, and watch-only Drive-share/admin residue.
@@ -143,6 +166,22 @@ Next inbox-wave or end of day.
 - **Julian got sharper this wave:** Mo's note is explicit — Bryan should send the attached consulting agreement to Julian in a separate email chain. That is now a defined outbound-routing task, not a vague Drive-share review.
 - I also **cleared 25 additional legacy unread threads** from the older backlog so the active inbox stays signal-heavy, though deeper 2025 residue still exists if we want a separate archive-cleanup pass later.
 - **Urgency order is unchanged:** (1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) Mike Kelly / Highlands execution, (4) Julian routing/send decision, (5) LEXQZT renewal admin.
+
+## Inbox Wave Addendum (2026-05-06 07:26 UTC)
+
+- **This wave mostly paid down old residue.** I marked **143 stale 2025 calendar acceptance/decline unread messages** read in one sweep, which materially reduced clutter without changing the actual work stack.
+- **One net-new inbox item surfaced:** a **Google account security alert / new sign-in notice** at **06:02 UTC**. That is probably explained by fresh Gmail access from this host/tooling, but it should still be confirmed if unexpected.
+- **The live unread stack is now five real threads:** **Google security alert**, **Julian Brittano consulting agreement**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads (**loan agreement** + **$86K wire instructions**).
+- **No new borrower or capital-markets fire surfaced.** 700 W La Veta remains the main carry-forward borrower issue because of the June 1 maturity, not because of fresh email.
+- **Urgency order is still:** (1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) Mike Kelly / Highlands execution, (4) Julian routing/send decision, (5) LEXQZT renewal admin, with **Google sign-in alert** as a low-grade security check.
+
+## Inbox Wave Addendum (2026-05-06 04:26 UTC)
+
+- **Cleanup landed hard without changing the real work.** I marked **123 additional obvious clutter / promo / recap unread messages** read this wave, including the Fireflies EPath recap email, PadSplit / Fund2Flip noise, old Skool notifications, rental alerts, and older Read Later residue.
+- **The actionable unread stack is still only four threads:** **Julian Brittano consulting agreement**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads (**loan agreement** + **$86K wire instructions**).
+- **EPath is now context, not clutter and not urgent.** The recap confirms PATH is discussing **8 projects**, nonprofit capital-stack structuring, and roughly **$2M-$3M of predevelopment need**, but it does not create a new same-day ask.
+- **No new borrower or capital-markets fire surfaced.** 700 W La Veta remains urgent because of the June 1 maturity, but that urgency is carry-forward rather than fresh inbox movement.
+- **Urgency order is still:** (1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) Mike Kelly / Highlands execution, (4) Julian routing/send decision, (5) LEXQZT renewal admin.
 
 ## Inbox Wave Addendum (2026-05-05 13:23 UTC)
 
@@ -339,3 +378,17 @@ Next inbox-wave or end of day.
 - Top inbox risk is still **Racquel Collier / Gibson Development** because the **$86,000 retainer wire request** remains unverified before any funds move.
 - The live deal fire is still **700 W La Veta Ave Unit E4** because the June 1 maturity and refinance proceeds gap remain unresolved.
 - **Material Capital Partners** remains a timing watch item only because Bryan's **Friday 10:00am ET** call is already locked, and **MailBox Money RE** stays a scheduled relationship meeting for **Mon May 4 11:30am PDT**, not a new emergency.
+
+## Inbox Wave Addendum (2026-05-06 13:27 UTC)
+
+- **One real new business thread surfaced this pass:** Bryan emailed **West Campus Towers — Capital Stack Breakdown + May 31 Brand Selection** at **12:00 UTC**, asking Justin Poses for the promised detailed capital-stack breakdown, checking whether **brand selection is still on track for May 31**, and asking about **GP-partner recruitment progress** so Brandon can start LP targeting.
+- **Cleanup still landed.** I marked **15 additional obvious unread clutter/stale-notice threads** read (Slack free-plan retention notice, old Gelt/Padsplit/Lima One marketing, an expired login code, and stale meeting/appointment noise).
+- **The live unread action stack is now six threads:** **West Campus Towers**, **Google security alert**, **Julian Brittano consulting agreement routing**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads (**loan agreement** + **$86K wire instructions**).
+- **Urgency shifted slightly, not dramatically.** Gibson still leads because of money movement risk; **700 W La Veta** remains the live borrower fire; **West Campus** now joins the real action pile as a concrete sponsor follow-through; Highlands, Julian routing, Google sign-in confirmation, and LEXQZT renewal remain behind them.
+
+## Inbox Wave Addendum (2026-05-06 10:27 UTC)
+
+- **Another cleanup pass landed without changing the work stack.** I marked **32 obvious unread clutter messages** read (promos, Skool/community noise, rental alerts, webinar/marketing mail, and stale admin residue).
+- **No net-new business email surfaced.** The live unread inbox is still just five real threads: **Google security alert**, **Julian Brittano consulting agreement routing**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads (**loan agreement** + **$86K wire instructions**).
+- **Gibson remains the biggest money-risk item.** Bryan's forwarded wire email is still explicitly asking Racquel to settle an **$86,000 retainer deposit** and send the receipt back so underwriting can start.
+- **No new borrower or capital-markets fire displaced the standing stack.** Urgency remains: **(1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) Highlands / Mike Kelly execution, (4) Julian routing/send decision, (5) LEXQZT renewal**, with the Google sign-in alert as a low-grade security check.

@@ -9,6 +9,8 @@
 ## May 2026
 
 ### 2026-05-06
+- Inbox-wave 13:27 UTC: surfaced Bryan's new West Campus Towers follow-up as the only net-new business thread, marked 15 more obvious clutter/stale-notice unread threads read, and refreshed INBOX_QUEUE + daily log
+- Inbox-wave 04:26 UTC: cleared 123 additional obvious clutter/promotional unread messages, confirmed the live unread stack is still only four real threads, captured the EPath recap as informational follow-up rather than fresh urgency, and refreshed INBOX_QUEUE + daily log
 - Inbox-wave 01:24 UTC: confirmed no net-new business email displaced the stack, verified the live unread window is down to four real threads (Julian agreement, Northwest / LEXQZT renewal, and the two Gibson wire/loan-doc threads), cleared 25 additional legacy unread backlog threads, and refreshed INBOX_QUEUE + ACTIVE_TASKS + LAST_SYNC + daily log
 
 ### 2026-05-05
