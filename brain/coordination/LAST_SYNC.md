@@ -400,3 +400,11 @@ Next inbox-wave or end of day.
 - **No net-new business email surfaced.** The live unread inbox is still just five real threads: **Google security alert**, **Julian Brittano consulting agreement routing**, **Northwest / LEXQZT renewal**, and the two **Gibson / Metro Flippers** threads (**loan agreement** + **$86K wire instructions**).
 - **Gibson remains the biggest money-risk item.** Bryan's forwarded wire email is still explicitly asking Racquel to settle an **$86,000 retainer deposit** and send the receipt back so underwriting can start.
 - **No new borrower or capital-markets fire displaced the standing stack.** Urgency remains: **(1) Gibson verification before any money moves, (2) 700 W La Veta rescue, (3) Highlands / Mike Kelly execution, (4) Julian routing/send decision, (5) LEXQZT renewal**, with the Google sign-in alert as a low-grade security check.
+
+
+## Priority Reset Addendum (2026-05-12 22:39 UTC)
+
+- Captured Alex's post-call priority stack into `/root/drafts/2026-05-12-priority-breakdown.md` so the work can run from a single current list instead of scattered notes.
+- Added new active tasks for **OKC Tiffany / Brandon equity raise**, **Adin Penn industrial debt follow-through**, **Judah Zelman call setup**, **Calvin Anderson / JB5 reply + scheduling**, **Jovon Miramar consulting agreement + Jay handoff**, and **PATH Capital Thursday prep**.
+- New same-week urgency bias is: **(1) Jovon consulting agreement + Miramar handoff, (2) Calvin response + call lock, (3) Judah call lock, (4) Tiffany docs to Brandon, (5) Brandon Adin proposal deadline, (6) PATH Thursday prep**.
+- Still waiting on execution decisions or outbound action for Julian document signing, Jeff mid-June reply, Phoenix Arts documents, DC OEM, Puerto Rico budget/Al feedback, and Fast Town / Florida Keys intake.

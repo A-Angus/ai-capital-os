@@ -43,6 +43,54 @@
 - **Next:** Lock exclusivity window and push lender outreach live.
 - **Added:** 2026-04-28 | **Updated:** 2026-05-05
 
+### T013 — OKC Tiffany / Brandon Equity Raise Coordination
+- **Type:** Capital raise follow-through
+- **Entity:** Dream Solutions Group
+- **Status:** Waiting on Tiffany term sheet + sponsor deck so Brandon can review and move toward sponsor meeting week of 2026-05-20.
+- **Blockers:** Docs not yet in hand; Brandon timeline to sponsor meeting not yet confirmed.
+- **Next:** Get docs from Tiffany, send to Brandon same day, and confirm Brandon LP presentation timing.
+- **Added:** 2026-05-12 | **Updated:** 2026-05-12
+
+### T014 — Adin Penn Industrial Debt / Brandon Proposal
+- **Type:** Capital partner follow-through
+- **Entity:** Dream Solutions Group
+- **Status:** Brandon owes capabilities sheet + example deal by Friday 2026-05-15 EOD; follow-up call needed week of 2026-05-20.
+- **Blockers:** Proposal materials not yet sent.
+- **Next:** Confirm Friday send, nudge if missed, and line up post-review call.
+- **Added:** 2026-05-12 | **Updated:** 2026-05-12
+
+### T015 — Judah Zelman Atlantic Mason Intro
+- **Type:** Relationship / call setup
+- **Entity:** Dream Solutions Group
+- **Status:** Need to lock a call this week and prep a tight Atlantic Mason brief plus deal context.
+- **Blockers:** Call not yet scheduled.
+- **Next:** Lock Tue/Wed slot and prep background + deal overview.
+- **Added:** 2026-05-12 | **Updated:** 2026-05-12
+
+### T016 — Calvin Anderson / JB5 Capital Structure Reply
+- **Type:** Sponsor response / meeting setup
+- **Entity:** Dream Solutions Group
+- **Status:** WhatsApp reply due with capital structure options; call should happen before Thursday PATH call.
+- **Blockers:** Reply not sent; call not yet locked.
+- **Next:** Draft/send response language and secure call slot.
+- **Added:** 2026-05-12 | **Updated:** 2026-05-12
+
+### T017 — Jovon Miramar Consulting Agreement + Jay Handoff
+- **Type:** Outbound docs / lender packaging
+- **Entity:** Dream Solutions Group
+- **Status:** Consulting agreement needs to go to Jovon; Miramar file access for Jay needs confirmation before lender review.
+- **Blockers:** Agreement unsent; file-access confirmation not done.
+- **Next:** Send agreement, confirm Jay access to full package, then route signed file to Jay.
+- **Added:** 2026-05-12 | **Updated:** 2026-05-12
+
+### T018 — PATH Capital Thursday Call Prep
+- **Type:** Meeting prep
+- **Entity:** Dream Solutions Group / PATH
+- **Status:** Thursday 2026-05-14 2:30pm call is treated as locked pending confirmation; donor/foundation positioning and Brandon brief are still needed.
+- **Blockers:** Prep not done.
+- **Next:** Prepare talking points, donor-route framing, Brandon brief, and confirm the meeting time.
+- **Added:** 2026-05-12 | **Updated:** 2026-05-12
+
 ---
 
 ## 🟡 ACTIVE (In progress, not same-day urgent)
