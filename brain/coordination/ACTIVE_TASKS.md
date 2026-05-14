@@ -170,3 +170,5 @@
 4. STALLED = no movement in 7+ days or waiting on an explicit Alex decision
 5. When a task completes, remove it from here and log to COMPLETED_ACTIONS.md
 6. Keep this file current enough that a fresh session can operate from it without reconstructing the whole inbox
+- Finalizing Tax Returns: Need to finalize 2025 tax returns
+

@@ -2,9 +2,59 @@
 
 **Purpose:** Snapshot of current state and recommended next actions. Updated every session.
 
-**Last Sync:** 2026-05-05 10:23 UTC
+**Last Sync:** 2026-05-13 15:55 UTC
 
 ---
+
+## Session 2026-05-13 — OpenClaw auto-email kill + Hermes audit
+
+### Incident: unauthorized emails sent today at 13:28 UTC
+
+OpenClaw cron `9a68a768` (`inbox-wave`, every 3h, qwen2.5:14b local) auto-sent **5 generic "I'll get back to you" replies** signed "Alex Angus" without approval. Recipients:
+- Bryan Marriott (Time Slots) — thread `19e218674485b7da`
+- Bryan Marriott (Capital for Warren Green Hotel) — thread `19e2186754fc6445`
+- Mo Castro (Bridge/Gap/Equity Funding Request Form) — thread `19e218675c00605c`
+- Al Rizek (Next Steps) — thread `19e2186757eaf74b`
+- Northwest Registered Agent (LEXQZT CA Renewal) — thread `19e218674fabeadf` — **Northwest replied asking if they should cancel their filing on their end. CA late-fee risk if not handled.**
+
+This is a soul.md hard-limit violation (no external messages without approval).
+
+### Actions taken
+
+1. **Backed up** `/home/openclaw/.openclaw/cron/jobs-state.json` → `jobs-state.json.bak-pre-disable-20260513-153637`
+2. **Disabled cron `9a68a768`** (inbox-wave) — the auto-sender
+3. **Disabled cron `2fa38212`** (inbox-cleanup-project, every 15min) — was relabeling Gmail every 15 min on qwen2.5:14b, 228 consecutive Telegram-delivery errors but Gmail label work was completing fine
+4. **Audited `/home/lexbot/hermes-agent/`** — turns out this is Nous Research Hermes v0.10.0 (2026-04-16), runnable, 24 platforms, 579 tests, with `hermes claw migrate` built in. **Not half-built — it's a production OSS project.**
+5. **Identified clean cutover path:** LexCapital bot (`@LexCapital_Bot`, token `8454758088:...` in `/home/openclaw/.openclaw/openclaw.json`) is currently unused. Pointing Hermes at it avoids token collision with @Lexx8_Bot. OpenClaw + LexxBot keep running untouched during parallel.
+
+### Cron state after this session
+
+| Cron | Status | Schedule | Notes |
+|---|---|---|---|
+| `9a68a768` inbox-wave | 🛑 DISABLED | every 3h | auto-sender; offender |
+| `2fa38212` inbox-cleanup-project | 🛑 DISABLED | every 15m | auto-relabeler; 228 errors |
+| `9c80a6c1` hermes-status-pulse | ✅ Active | every 10m | benign |
+| `34ebf140` hermes-operator-loop | ✅ Active | every 30m | benign |
+| `6366b87d` morning-brief | ✅ Active | 8am LA | Telegram-only |
+| `359c9a54` evening-brief | ✅ Active | 6pm LA | Telegram-only |
+
+**Rollback:** `sudo -u openclaw HOME=/home/openclaw /home/openclaw/.npm/bin/openclaw cron enable <id>` or restore from the `.bak-pre-disable-20260513-153637` file.
+
+### Open items requiring Alex
+
+1. **Northwest Registered Agent** — auto-message said *"I will take care of the CA renewal filing shortly."* They replied asking if they should cancel their filing. Needs clarifying reply: either confirm Alex files, or tell them to keep filing on their end. **LEXQZT Enterprise LLC at risk of CA late fee otherwise.**
+2. **Bryan x2 + Mo Castro + Al Rizek** — each auto-promised a follow-up within 24h. Now owed real replies.
+3. **Hermes cutover** — Alex confirmed direction (LexCapital bot as target). 6-step plan in [project_hermes_cutover.md](../../.claude/projects/-home-lexbot/memory/project_hermes_cutover.md). Not started — pending decision to begin.
+
+### What was NOT done
+
+- No model swap on OpenClaw (Codex gpt-5.4 still chat default). Slowness root cause may resolve once disabled crons stop competing for resources — observe first.
+- No reply drafted to Northwest yet — pending Alex's call on which way to play it.
+- No Hermes install / migration yet.
+
+---
+
+## Pre-2026-05-13 sync archive below
 
 ## What Was Done This Session (Atlas / Claude Code)
 
