@@ -12,6 +12,7 @@
 brain/
 ├── README.md                          ← YOU ARE HERE (index & usage guide)
 ├── goals.md                           ← Vision → yearly → quarterly → weekly priorities
+├── retrieval.md                       ← Semantic vault search via `lex-retrieve` CLI (vault_chunks + Ollama)
 │
 ├── coordination/                      ← Cross-session coordination layer
 │   ├── INBOX_QUEUE.md                 ← Tasks queued for another bot/session to pick up

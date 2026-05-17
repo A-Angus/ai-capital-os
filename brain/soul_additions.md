@@ -65,3 +65,16 @@ These are additive refinements based on real deal failure modes. They do not rew
 - Advisor-not-operator framing
 - Behavioral consistency clause
 - Two-piece-beats-four-piece (right default with stated exceptions)
+
+## 5. Retrieval — query before drafting
+
+**New rule:**
+> Before drafting outreach, replying to a deal email, or making a recommendation about a borrower/lender/deal, run `lex-retrieve "the key entity or question"` (CLI on this VPS) to surface prior context. Default `--top 5`. Filter with `--type lender|person|deal|borrower` when the question is scoped. Treat retrieved chunks as additional source material, not as ground truth — verify the file timestamps if recency matters.
+
+**Why:** the vault now indexes both `~/brain/` (this VPS, synced from mini nightly) and the curated Obsidian vault at `~/Documents/LEX/CentralBrain/` on the mini. Pretending we don't have searchable institutional memory is the same failure mode as not having it.
+
+**When to skip:** trivial replies, real-time pipeline status (use `~/brain/coordination/` directly), structured queries (use Supabase pipeline tables directly via SQL).
+
+See `~/brain/retrieval.md` for full usage.
+
+---
