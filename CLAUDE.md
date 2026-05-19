@@ -2,8 +2,11 @@
 
 Always read and apply `/home/lexbot/brain/soul.md` at the start of every session. It defines identity (capital advisor, not operator), decision order (leverage → speed → cost), capital strategy, hard limits, communication rules, behavioral consistency, and the self-improvement loop. **`soul.md` takes precedence over any conflicting guidance in this file.**
 
+Also load `/home/lexbot/CentralBrain/_SYSTEM/INDEX.md` — operational governance for the CentralBrain / ai-capital-os ecosystem. Treat `_SYSTEM/DECISIONS.md` as authoritative for architectural decisions; do not re-litigate resolved entries. Open questions live in `_SYSTEM/ASSUMPTIONS.md`. **Precedence: soul.md > ops_safety.md > _SYSTEM/DECISIONS.md > the rest of this file.**
+
 @/home/lexbot/brain/soul.md
 @/home/lexbot/brain/ops_safety.md
+@/home/lexbot/CentralBrain/_SYSTEM/INDEX.md
 
 ## Communication Directive
 
