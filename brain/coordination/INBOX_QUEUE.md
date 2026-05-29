@@ -1,4 +1,3 @@
-
 - Equifax Credit Report and Score Update: New credit report and score available (2026-05-09)
   - From: no-reply@equifax.com
   - Labels: UNREAD, CATEGORY_UPDATES, INBOX
@@ -20,3 +19,7 @@
 - PATH Capital Raising Discussion — Next Steps: Follow-up on capital raising discussion (2026-05-08)
   - From: Sandy Oluwek <sandyo@epath.org>
   - Labels: UNREAD, CATEGORY_PERSONAL, INBOX
+- OFF MARKET FIXER - Compton, CA: wholesale fixer packet from Rick @ JMBH Off Market Properties (2026-05-26)
+  - From: "Rick @ JMBH Off Market Properties" <dispo@johnmedinabuyshouses.com>
+  - Labels: CATEGORY_PROMOTIONS, Read Later
+  - Quick take: $430K ask vs $600K ARV = 71.7% of ARV before repairs; no direct stored buyer-box match yet; needs address + rehab scope before routing
