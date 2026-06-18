@@ -41,6 +41,7 @@ Use this as the first filter when structuring any deal.
 | Short-term rental (STR/Airbnb) | STR DSCR lenders | Visio Lending, Lima One, Griffin Funding, Newfi Lending, Easy Street Capital |
 | Ground-up construction | Bridge / construction lenders | Lima One, Gelt Financial, Socotra Capital, Easy Street Capital, Dominion Financial Services, Express Capital Financing, Temple View Capital |
 | Commercial development | Bridge or mezzanine lenders | Bloomfield Capital, Global Capital Partners, Avana Capital, X Caliber Capital |
+| Hotel / hospitality | Hospitality bridge, construction, permanent | Peachtree Group / Stonehill Strategic Capital |
 | Raw land / land bridge | Land lenders | Kennedy Funding, Broadmark Realty Capital, Vaster Capital, Raw Land Lenders LLC |
 | EMD / earnest money deposit | EMD lenders | Duckfund, Levine Capital, Joint Venture Loans, EMD Transactional Funding |
 | Capital gaps | Private capital partners | Carrol Walton Grizzle, Eric Fuller, Federal Finance, Levine Capital |
@@ -225,6 +226,18 @@ These lenders provide capital above the senior loan or supply structured financi
 - Offers referral fee for capital raisers.
 - Sent business plan, structure docs, and sample deal (131 Renshaw Rd) on Apr 3.
 - Connected through Alex and Bryan.
+
+### Peachtree Group / Stonehill Strategic Capital — John Thomas
+- Contact: John Thomas, Business Development Analyst
+- Email: jthomas@peachtreegroup.com | Cell: 814.571.7353
+- Address: One Alliance Center, 3500 Lenox Rd., Suite 625, Atlanta, GA 30326
+- Focus: Hospitality / hotel lending and equity (bridge, construction, permanent)
+- Lending programs: PDF one-pager sent 6/8/26 ("Credit Lending Loan Programs v2026") — request from Alex's inbox
+- Equity parameters: John indicated he would send separately — not yet received
+- Connected via Bryan Marriott, 6/8/26
+- Best fit: Branded hotel deals ($20M+), hotel construction, hotel bridge
+- Active deal matches: Trades District Hotel (Bloomington IN, $67M), Graduate Champaign Hotel ($38M)
+- ⚠️ Full criteria in PDF attachment — pull and review before submitting a deal
 
 ---
 
